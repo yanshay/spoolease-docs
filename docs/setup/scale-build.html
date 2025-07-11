@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-setup/scale-build" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.8.1">
+<title data-rh="true">Scale Build | SpoolEase</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://docs.spoolease.io/docs/setup/scale-build"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Scale Build | SpoolEase"><meta data-rh="true" name="description" content="This guide provides step-by-step instructions for building SpoolEase Scale - the filament weight module of the SpoolEase system."><meta data-rh="true" property="og:description" content="This guide provides step-by-step instructions for building SpoolEase Scale - the filament weight module of the SpoolEase system."><link data-rh="true" rel="icon" href="/img/spoolease-logo.png"><link data-rh="true" rel="canonical" href="https://docs.spoolease.io/docs/setup/scale-build"><link data-rh="true" rel="alternate" href="https://docs.spoolease.io/docs/setup/scale-build" hreflang="en"><link data-rh="true" rel="alternate" href="https://docs.spoolease.io/docs/setup/scale-build" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Build & Setup","item":"https://docs.spoolease.io/docs/category/build--setup"},{"@type":"ListItem","position":2,"name":"Scale Build","item":"https://docs.spoolease.io/docs/setup/scale-build"}]}</script><link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="SpoolEase RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/blog/atom.xml" title="SpoolEase Atom Feed"><link rel="stylesheet" href="/assets/css/styles.bf5b9961.css">
+<script src="/assets/js/runtime~main.d8f650b4.js" defer="defer"></script>
+<script src="/assets/js/main.ac6b455d.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t="light";var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",e||t),document.documentElement.setAttribute("data-theme-choice",e||t)}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/img/spoolease-logo.png"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/spoolease-logo.png" alt="SpoolEase Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/spoolease-logo.png" alt="SpoolEase Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">SpoolEase</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/docs/welcome">Documentation</a><a href="https://www.spoolease.io/index.html" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">Flash Product Page</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://github.com/yanshay/spoolease" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"><div class="navbar__search searchBarContainer_NW3z" dir="ltr"><input placeholder="Search" aria-label="Search" class="navbar__search-input searchInput_YFbd" value=""><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/welcome">Welcome</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/docs/components">Required Components</a><button aria-label="Expand sidebar category &#x27;Required Components&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--active" href="/docs/category/build--setup">Build &amp; Setup</a><button aria-label="Collapse sidebar category &#x27;Build &amp; Setup&#x27;" aria-expanded="true" type="button" class="clean-btn menu__caret"></button></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/setup/console-build">Console Build</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/setup/console-setup">Console Setup</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/docs/setup/scale-build">Scale Build</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/setup/scale-setup">Scale Setup</a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/docs/category/quick-start">Quick Start</a><button aria-label="Expand sidebar category &#x27;Quick Start&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/docs/category/full-guide">Full Guide</a><button aria-label="Expand sidebar category &#x27;Full Guide&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/docs/category/concepts">Concepts</a><button aria-label="Expand sidebar category &#x27;Concepts&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/docs/troubleshooting">Troubleshooting</a><button aria-label="Expand sidebar category &#x27;Troubleshooting&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><a class="breadcrumbs__link" href="/docs/category/build--setup"><span>Build &amp; Setup</span></a></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Scale Build</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Scale Build</h1></header><p>This guide provides step-by-step instructions for building SpoolEase Scale - the filament weight module of the SpoolEase system.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="preparing-the-esp32-s3">Preparing the ESP32-S3<a href="#preparing-the-esp32-s3" class="hash-link" aria-label="Direct link to Preparing the ESP32-S3" title="Direct link to Preparing the ESP32-S3">​</a></h2>
+<ul>
+<li>To enable the front RGB LED functionality, solder a small jumper (two adjacent pads) on the board.</li>
+<li>This jumper is located directly adjacent to the large RGB LED, marked with &#x27;RGB&#x27; label nearby.</li>
+<li>Only a minimal amount of solder is required for this connection.</li>
+<li>Verify successful bridging by using a multimeter to check continuity between pin 48 and any of the four red pins (only one would show continuity).</li>
+<li>While not mandatory, this step is highly recommended as it provides valuable status feedback from the SpoolEase Scale, particularly when not connected to the SpoolEase Console.</li>
+<li>Check the images below - first one Before bridging and the other After bridging</li>
+</ul>
+<p><img decoding="async" loading="lazy" alt="ESP32-S3 Solder Bridge 1" src="/assets/images/scale-esp32s3-solder1-d310fb66022cd92d35186f62990a17b3.jpg" width="4032" height="3024" class="img_ev3q">
+<img decoding="async" loading="lazy" alt="ESP32-S3 Solder Bridge 2" src="/assets/images/scale-esp32s3-solder2-7b56cc184450d8c08757e24b3fed8715.jpg" width="4032" height="3024" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="assembly-instructions">Assembly Instructions<a href="#assembly-instructions" class="hash-link" aria-label="Direct link to Assembly Instructions" title="Direct link to Assembly Instructions">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="1-hx711-wiring">1. HX711 Wiring<a href="#1-hx711-wiring" class="hash-link" aria-label="Direct link to 1. HX711 Wiring" title="Direct link to 1. HX711 Wiring">​</a></h3>
+<p>The HX711 PCB has connection points on both sides:</p>
+<ul>
+<li>One side has 4 holes for ESP32-S3 connections</li>
+<li>The other side has 6 holes (only 4 used) for load cell connections</li>
+</ul>
+<p>Begin by soldering the ESP32-S3 side connections (all 4 holes need to be wired). For the load cell side, precise wiring is critical. A helpful technique: insert wires through the holes, secure with masking tape, then solder from the opposite side.</p>
+<p><strong>Load Cell to HX711 Connection:</strong></p>
+<table><thead><tr><th>Load Cell Wire Color</th><th>HX711 Pin</th></tr></thead><tbody><tr><td>🟥 <strong>Red</strong></td><td>E+</td></tr><tr><td>⬛ <strong>Black</strong></td><td>E-</td></tr><tr><td>⚪ <strong>White</strong></td><td>A-</td></tr><tr><td>🟩 <strong>Green</strong></td><td>A+</td></tr></tbody></table>
+<p><img decoding="async" loading="lazy" alt="H711 Wiring 1" src="/assets/images/scale-hx711-wiring-1-6a5bfa728e78e1cba245a234f14420c1.jpg" width="3008" height="2113" class="img_ev3q">
+<img decoding="async" loading="lazy" alt="H711 Wiring 2" src="/assets/images/scale-hx711-wiring-2-1ca8850529b93c887baec0d46ebd2a5c.jpg" width="1916" height="1310" class="img_ev3q">
+<img decoding="async" loading="lazy" alt="H711 Wiring 3" src="/assets/images/scale-hx711-wiring-3-9bd7e650e121b8321efd63079c03f708.jpg" width="3020" height="2233" class="img_ev3q">
+<img decoding="async" loading="lazy" alt="H711 Wiring 4" src="/assets/images/scale-hx711-wiring-4-43e877534d6009f11be34585c2a8702e.jpg" width="3024" height="1968" class="img_ev3q">
+<img decoding="async" loading="lazy" alt="H711 Wiring 5" src="/assets/images/scale-hx711-wiring-5-137ff6d71d4af5e8fdacee8e5a908b84.jpg" width="4032" height="3024" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2-connect-hx711-to-esp32-s3">2. Connect HX711 to ESP32-S3<a href="#2-connect-hx711-to-esp32-s3" class="hash-link" aria-label="Direct link to 2. Connect HX711 to ESP32-S3" title="Direct link to 2. Connect HX711 to ESP32-S3">​</a></h3>
+<p>Connect the HX711 to the ESP32-S3 using the following pin mapping:</p>
+<table><thead><tr><th>HX711 Pin</th><th>ESP32-S3 Pin</th></tr></thead><tbody><tr><td>GND</td><td>GND</td></tr><tr><td>DT</td><td>5</td></tr><tr><td>SCK</td><td>4</td></tr><tr><td>VCC</td><td>3V3</td></tr></tbody></table>
+<p>Note: The ESP32-S3 GND is on one side of the board, while the other pins are on the opposite corner.
+<img decoding="async" loading="lazy" alt="HX711 ESP32-S3" src="/assets/images/scale-hx711-esp32s3-b0426bbd99c3f7d64f5391800f5d1097.jpg" width="3548" height="2136" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="3-mount-the-loadcell">3. Mount the LoadCell<a href="#3-mount-the-loadcell" class="hash-link" aria-label="Direct link to 3. Mount the LoadCell" title="Direct link to 3. Mount the LoadCell">​</a></h3>
+<ul>
+<li>Attach the load cell to the base using the two M5x30 screws</li>
+<li>Position the load cell so that the wires come out to the left</li>
+<li>Insert screws from the bottom of the base</li>
+<li>Tighten firmly to prevent any vertical movement of the load cell</li>
+</ul>
+<p><img decoding="async" loading="lazy" alt="Mount LoadCell" src="/assets/images/scale-mount-load-cell-6b4c2a3e29cb2aa33cbbfec8642744e1.jpg" width="3022" height="2325" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="4-install-hx711-and-esp32-s3-on-the-base">4. Install HX711 and ESP32-S3 on the Base<a href="#4-install-hx711-and-esp32-s3-on-the-base" class="hash-link" aria-label="Direct link to 4. Install HX711 and ESP32-S3 on the Base" title="Direct link to 4. Install HX711 and ESP32-S3 on the Base">​</a></h3>
+<ol>
+<li>
+<p><strong>HX711 Placement:</strong></p>
+<ul>
+<li>Locate the small compartment on the left side of the base with two 3mm poles</li>
+<li>Slide the HX711 (which has two 3mm holes) onto these poles</li>
+<li>Optionally install the appropriate HX711 lid (model includes two options) depending on your connector type</li>
+</ul>
+</li>
+<li>
+<p><strong>ESP32-S3 Placement:</strong></p>
+<ul>
+<li>Position the ESP32-S3 in its designated location at the front</li>
+<li>Ensure it sits fully in place with all connections secure, it should have only very little room to move sideways if any</li>
+<li>The ESP32-S3 antenna should be positioned on the right side</li>
+</ul>
+</li>
+</ol>
+<p><img decoding="async" loading="lazy" alt="Components Base Placement 1" src="/assets/images/scale-components-base-placement-1-56c48a419b8fc840e358acc1360a3335.jpg" width="3024" height="4032" class="img_ev3q">
+<img decoding="async" loading="lazy" alt="Components Base Placement 2" src="/assets/images/scale-components-base-placement-2-b57383c4794565e42993910fdc0b0510.jpg" width="3024" height="4032" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="5-optional-pn532-installation">5. Optional PN532 Installation<a href="#5-optional-pn532-installation" class="hash-link" aria-label="Direct link to 5. Optional PN532 Installation" title="Direct link to 5. Optional PN532 Installation">​</a></h3>
+<p>As mentioned earlier, this step is optional and only needed if you want to add a tag reader to SpoolEase Scale. However, if you skip it, make sure to disable the NFC module in the SpoolScale Web Config to avoid errors.</p>
+<ol>
+<li><strong>Connect wires to PN532:</strong>
+<ul>
+<li>Similar to the HX711, connect 7 Dupont wires to the PN532</li>
+<li>Install wires so they come out on the side opposite to the antenna (not the electronics side) (<strong>image below is a bad example and doesn&#x27;t follow this recommendation</strong>)</li>
+<li>Configure the PN532 for SPI mode: with board poitioned so dip-switches on bottom right, set left switch down and right switch up</li>
+</ul>
+</li>
+</ol>
+<p><img decoding="async" loading="lazy" alt="PN532 Wiring" src="/assets/images/scale-pn532-wiring-8d4811a155af6b9fd67264fdef4842eb.jpg" width="2511" height="1764" class="img_ev3q"></p>
+<ol start="2">
+<li>
+<p><strong>Connect PN532 to ESP32-S3:</strong></p>
+<table><thead><tr><th>PN532 Pin</th><th>ESP32-S3 Pin</th></tr></thead><tbody><tr><td>SCK</td><td>15</td></tr><tr><td>MISO</td><td>16</td></tr><tr><td>MOSI</td><td>17</td></tr><tr><td>SS</td><td>18</td></tr><tr><td>VCC</td><td>3V3 (next to HX711 connection)</td></tr><tr><td>GND</td><td>GND (next to HX711 connection)</td></tr><tr><td>IRQ</td><td>8</td></tr></tbody></table>
+</li>
+</ol>
+<p><img decoding="async" loading="lazy" alt="PN532 ESP32-S3 Connections" src="/assets/images/scale-pn532-esp32s3-connections-e1294dd2373b86931668eb35c3a8f342.jpg" width="4032" height="3024" class="img_ev3q"></p>
+<ol start="3">
+<li><strong>Install PN532 on Base:</strong>
+<ul>
+<li>Place the PN532 into the rails on the right side of the base</li>
+<li>Position the antenna (white rectangle) facing outward</li>
+<li>Direct wires toward the rear of the case (they will turn back to reach the ESP32-S3)</li>
+<li>The narrow side of the PN532 should be parallel to the base</li>
+</ul>
+</li>
+</ol>
+<p><img decoding="async" loading="lazy" alt="PN532 Install on Base" src="/assets/images/scale-pn532-install-on-base-1c00cec1bb05b9e8e137c6533cc35ce2.jpg" width="3024" height="4032" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="6-test-before-final-assembly">6. Test Before Final Assembly<a href="#6-test-before-final-assembly" class="hash-link" aria-label="Direct link to 6. Test Before Final Assembly" title="Direct link to 6. Test Before Final Assembly">​</a></h3>
+<p>At this point, test your configuration before closing the case. For this, refer to the <a href="/docs/setup/scale-setup">Scale Setup Guide</a> to ensure everything is functioning properly. This step is crucial as disassembly will require removing screws if troubleshooting is needed later.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="7-final-assembly">7. Final Assembly<a href="#7-final-assembly" class="hash-link" aria-label="Direct link to 7. Final Assembly" title="Direct link to 7. Final Assembly">​</a></h3>
+<ol>
+<li><strong>Prepare the Cover:</strong>
+<ul>
+<li>Glue the beams to the right side of the case (especially helpful for visibility to the position of the PN532)</li>
+<li>Locate the two small buttons (originally colored red and green)</li>
+<li>Insert buttons from inside the cover pushing outward (red, for reset, to the right, green, for features use, to the left)</li>
+<li>Ensure buttons move freely (sand lightly if needed)</li>
+<li>Temporarily secure buttons with masking tape from the outside</li>
+</ul>
+</li>
+</ol>
+<p><img decoding="async" loading="lazy" alt="Cover Side" src="/assets/images/scale-cover-side-219fbe515e7faf30327f0ccf29e1fc00.jpg" width="4032" height="3024" class="img_ev3q">
+<img decoding="async" loading="lazy" alt="Cover Buttons 1" src="/assets/images/scale-cover-buttons-1-6fc8d5a0101a619bedad567a32a43e64.jpg" width="4032" height="3024" class="img_ev3q">
+<img decoding="async" loading="lazy" alt="Cover Buttons 2" src="/assets/images/scale-cover-buttons-2-94094bc0da6e30efd8df4c1e73f013c5.jpg" width="4032" height="3024" class="img_ev3q"></p>
+<ol start="2">
+<li>
+<p><strong>Wire Management:</strong></p>
+<ul>
+<li>Verify the ESP32-S3 is properly positioned</li>
+<li>Ensure all wires are clear of the load cell</li>
+<li>Keep wires below or to the sides of components, not extending beyond base edges</li>
+</ul>
+</li>
+<li>
+<p><strong>Attach Cover:</strong></p>
+<ul>
+<li>Carefully place the cover over the base without pinching any wires</li>
+<li>Secure the cover using the two side notches that lock into the base</li>
+<li>Remove the masking tape from the buttons</li>
+<li>Test button functionality - you should feel them pressing the underlying board buttons</li>
+<li>The front vertical slot should reveal three LEDs at the bottom and a larger RGB LED at the top</li>
+</ul>
+</li>
+</ol>
+<p><img decoding="async" loading="lazy" alt="Cover Placed" src="/assets/images/scale-cover-placed-f44e95113a7d124892b3de2938ca5b4b.jpg" width="3024" height="4032" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="8-install-the-plate">8. Install the Plate<a href="#8-install-the-plate" class="hash-link" aria-label="Direct link to 8. Install the Plate" title="Direct link to 8. Install the Plate">​</a></h3>
+<ol>
+<li>Insert the two Spool Supports into the plate:<!-- -->
+<ul>
+<li>Position the sloped side of each support facing the center</li>
+<li>Ensure a tight fit in the plate holes, it may require some force to push them in (or add glue if hold not firm)</li>
+</ul>
+</li>
+</ol>
+<p><img decoding="async" loading="lazy" alt="Assemble Plate" src="/assets/images/scale-assemble-plate-7ced69c5f3440c78a778ec2cfa61b002.jpg" width="2587" height="3107" class="img_ev3q"></p>
+<ol start="2">
+<li>Mount the plate:<!-- -->
+<ul>
+<li>Place the plate with text facing to the front into the top square hole of the case</li>
+<li>Secure the plate to the LoadCell using the two M4x30 screws</li>
+</ul>
+</li>
+</ol>
+<p><img decoding="async" loading="lazy" alt="Build Done" src="/assets/images/scale-build-done-f87974c4b3efed7544e499c7dabfff04.jpg" width="3024" height="4032" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="congratulations">Congratulations!<a href="#congratulations" class="hash-link" aria-label="Direct link to Congratulations!" title="Direct link to Congratulations!">​</a></h2>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="you-are-the-proud-owner-of-spoolese-scale">You are the proud owner of SpoolEse Scale<a href="#you-are-the-proud-owner-of-spoolese-scale" class="hash-link" aria-label="Direct link to You are the proud owner of SpoolEse Scale" title="Direct link to You are the proud owner of SpoolEse Scale">​</a></h4>
+<p>Continue to complete the setup using the <a href="/docs/setup/scale-setup">Scale Setup Guide</a></p></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/setup/console-setup"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Console Setup</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/setup/scale-setup"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Scale Setup</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#preparing-the-esp32-s3" class="table-of-contents__link toc-highlight">Preparing the ESP32-S3</a></li><li><a href="#assembly-instructions" class="table-of-contents__link toc-highlight">Assembly Instructions</a><ul><li><a href="#1-hx711-wiring" class="table-of-contents__link toc-highlight">1. HX711 Wiring</a></li><li><a href="#2-connect-hx711-to-esp32-s3" class="table-of-contents__link toc-highlight">2. Connect HX711 to ESP32-S3</a></li><li><a href="#3-mount-the-loadcell" class="table-of-contents__link toc-highlight">3. Mount the LoadCell</a></li><li><a href="#4-install-hx711-and-esp32-s3-on-the-base" class="table-of-contents__link toc-highlight">4. Install HX711 and ESP32-S3 on the Base</a></li><li><a href="#5-optional-pn532-installation" class="table-of-contents__link toc-highlight">5. Optional PN532 Installation</a></li><li><a href="#6-test-before-final-assembly" class="table-of-contents__link toc-highlight">6. Test Before Final Assembly</a></li><li><a href="#7-final-assembly" class="table-of-contents__link toc-highlight">7. Final Assembly</a></li><li><a href="#8-install-the-plate" class="table-of-contents__link toc-highlight">8. Install the Plate</a></li></ul></li><li><a href="#congratulations" class="table-of-contents__link toc-highlight">Congratulations!</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://discord.gg/6brKUCERcQ" target="_blank" rel="noopener noreferrer" class="footer__link-item">Discord<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://makerworld.com/en/@yanshay" target="_blank" rel="noopener noreferrer" class="footer__link-item">MakerWorld<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://github.com/yanshay/SpoolEase/discussions" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub Discussions<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/blog">Blog</a></li><li class="footer__item"><a href="https://github.com/yanshay/spoolease" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 SpoolEase</div></div></div></footer></div>
+</body>
+</html>
