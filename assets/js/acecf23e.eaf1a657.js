@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkspoolease_docs=self.webpackChunkspoolease_docs||[]).push([[1903],{1912:s=>{s.exports=JSON.parse('{"blogBasePath":"/spoolease-docs/blog","blogTitle":"Blog","authorsListPath":"/spoolease-docs/blog/authors"}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkspoolease_docs=self.webpackChunkspoolease_docs||[]).push([[7543],{6451:e=>{e.exports=JSON.parse('{"metadata":{"permalink":"/spoolease-docs/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":4,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);
