@@ -5,9 +5,9 @@ import type * as Preset from "@docusaurus/preset-classic";
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: "My Site",
-  tagline: "Dinosaurs are cool",
-  favicon: "img/favicon.ico",
+  title: "SpoolEase",
+  tagline: "Streamlining all aspects of 3D printing filament handling",
+  favicon: "img/spoolease-logo.png",
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -46,8 +46,8 @@ const config: Config = {
           sidebarPath: "./sidebars.ts",
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+          // editUrl:
+          //   "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
         },
         blog: {
           showReadingTime: true,
@@ -57,8 +57,8 @@ const config: Config = {
           },
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+          // editUrl:
+          //   "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
           // Useful options to enforce blogging best practices
           onInlineTags: "warn",
           onInlineAuthors: "warn",
@@ -73,23 +73,24 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: "img/docusaurus-social-card.jpg",
+    // image: "img/docusaurus-social-card.jpg",
     navbar: {
-      title: "My Site",
+      title: "SpoolEase",
       logo: {
-        alt: "My Site Logo",
-        src: "img/logo.svg",
+        alt: "SpoolEase Logo",
+        src: "img/spoolease-logo.png",
       },
       items: [
         {
           type: "docSidebar",
-          sidebarId: "tutorialSidebar",
+          sidebarId: "documentationSidebar",
           position: "left",
-          label: "Tutorial",
+          label: "Documentation",
         },
-        { to: "/blog", label: "Blog", position: "left" },
+        // { to: "/blog", label: "Blog", position: "left" },
+        { to:"https://www.spoolease.io/index.html", label: "Flash Product Page", position: "left" },
         {
-          href: "https://github.com/facebook/docusaurus",
+          href: "https://github.com/yanshay/spoolease",
           label: "GitHub",
           position: "right",
         },
@@ -102,7 +103,7 @@ const config: Config = {
           title: "Docs",
           items: [
             {
-              label: "Tutorial",
+              label: "Documentation",
               to: "/docs/intro",
             },
           ],
@@ -111,16 +112,16 @@ const config: Config = {
           title: "Community",
           items: [
             {
-              label: "Stack Overflow",
-              href: "https://stackoverflow.com/questions/tagged/docusaurus",
-            },
-            {
               label: "Discord",
-              href: "https://discordapp.com/invite/docusaurus",
+              href: "https://discord.gg/6brKUCERcQ",
             },
             {
-              label: "X",
-              href: "https://x.com/docusaurus",
+              label: "MakerWorld",
+              href: "https://makerworld.com/en/@yanshay",
+            },
+            {
+              label: "GitHub Discussions",
+              href: "https://github.com/yanshay/SpoolEase/discussions",
             },
           ],
         },
@@ -133,12 +134,12 @@ const config: Config = {
             },
             {
               label: "GitHub",
-              href: "https://github.com/facebook/docusaurus",
+              href: "https://github.com/yanshay/spoolease",
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} SpoolEase`,
     },
     prism: {
       theme: prismThemes.github,
