@@ -163,6 +163,7 @@ const config: Config = {
       },
     ],
   ],
+  plugins: ["./src/plugins/tailwind-config.js"],
 };
 
 export default config;

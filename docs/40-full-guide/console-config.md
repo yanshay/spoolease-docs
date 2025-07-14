@@ -1,3 +1,6 @@
+---
+title: Console Config
+---
 
 ## Managing the User Spools List
 

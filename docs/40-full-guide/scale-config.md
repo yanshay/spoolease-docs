@@ -1,10 +1,13 @@
+---
+title: Scale Configuration
+---
 For configuration, SpoolEase Scale offers a web application similar to SpoolEase Console.
 
 ## SpoolEase Scale Web Configuration
 
 Since SpoolEase Scale has no display, its web configuration interface is always active. The security key isn't visible on the device, so you'll need to remember it. For convenience, you can use the same fixed key you configured for SpoolEase Console, which is displayed when web configuration is activated on that device.
 
-If you forget your security key, follow the reset procedure described in the [SpoolEase Scale Setup](/docs/20-setup/scale-setup.md) troubleshooting section.
+If you forget your security key, follow the reset procedure described in the [SpoolEase Scale Setup](../build-setup/scale-setup) troubleshooting section.
 
 Most configuration steps were completed during initial setup and won't be repeated here.
 
@@ -20,7 +23,7 @@ To enable it:
 
 ## Recalibrating the Scale
 
-If you notice inaccurate measurements, you can recalibrate the scale at any time by following the procedure in the [SpoolEase Scale Setup Guide](/docs/20-setup/scale-setup.md).
+If you notice inaccurate measurements, you can recalibrate the scale at any time by following the procedure in the [SpoolEase Scale Setup Guide](../build-setup/scale-setup).
 
 
 ## Finding SpoolEase Scale IP Address

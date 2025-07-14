@@ -1,56 +1,106 @@
-import type {ReactNode} from 'react';
-import clsx from 'clsx';
-import Heading from '@theme/Heading';
-import styles from './styles.module.css';
+import type { ReactNode } from "react";
+import clsx from "clsx";
+import Heading from "@theme/Heading";
+import styles from "./styles.module.css";
 
 type FeatureItem = {
   title: string;
-  Svg: React.ComponentType<React.ComponentProps<'svg'>>;
+  Svg: React.ComponentType<React.ComponentProps<"svg">>;
+  Img: string;
   description: ReactNode;
 };
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: "NFC Spool Tagging",
+    Svg: null,
+    Img: require("@site/static/img/nfc-tagging.png").default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Tag your filament spools to unlock powerful features, better
+        organization, and advanced tracking capabilities.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: "Inventory Management",
+    Svg: null,
+    Img: require("@site/static/img/inventory-management-4.png").default,
+
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Smart inventory management for your 3D filament spools — track type,
+        color, weight, and weight. Stay organized and avoid waste.
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: "Available Filament Tracking",
+    Svg: null,
+    Img: require("@site/static/img/weight-tracking.png").default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Precisely track how much filament remains on each spool, eliminating
+        mid-print failures and reducing waste.
+      </>
+    ),
+  },
+  {
+    title: "Automatic Filament Configuration",
+    Svg: null,
+    Img: require("@site/static/img/nfc-configuration.png").default,
+    description: (
+      <>
+        NFC tags automatically configure your printer and adjust settings when
+        swapping filaments, streamlining your workflow and eliminating manual
+        input errors.
+      </>
+    ),
+  },
+  {
+    title: "Bambulab Compatibility",
+    Svg: null,
+    Img: require("@site/static/img/bambulab-compatibility.png").default,
+    description: (
+      <>
+        Fully supports Bambulab X1, P1, and A1 product lines, enhancing your
+        existing printer's capabilities.
+      </>
+    ),
+  },
+  {
+    title: "Constantly Evolving",
+    Svg: null,
+    Img: require("@site/static/img/evolving.png").default,
+    description: (
+      <>
+        New features are added all the time to make filament management even
+        easier — with community-driven development, SpoolEase keeps improving.
       </>
     ),
   },
 ];
 
-function Feature({title, Svg, description}: FeatureItem) {
+function Feature({ title, Svg, Img, description }: FeatureItem) {
   return (
-    <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
-      </div>
-      <div className="text--center padding-horiz--md">
-        <Heading as="h3">{title}</Heading>
-        <p>{description}</p>
+    <div className="col col--4">
+      <div className="h-full rounded-2xl border border-gray-300 bg-white shadow-md p-0 pb-0 pt-4 transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg">
+        <div className="flex justify-center mb-0 aspect-square w-full">
+          {Svg && <Svg className="h-30 text-blue-600" role="img" />}
+          {Img && (
+            <img
+              src={Img}
+              className="max-w-[70%] max-h-[70%] rounded-2xl object-contain"
+              alt=""
+            />
+          )}
+        </div>
+        <div className="text-center px-3 -mt-21">
+          <Heading as="h3" className="text-xl font-semibold mb-2">
+            {title}
+          </Heading>
+          <p className="text-gray-600">{description}</p>
+        </div>
       </div>
     </div>
   );
@@ -60,7 +110,7 @@ export default function HomepageFeatures(): ReactNode {
   return (
     <section className={styles.features}>
       <div className="container">
-        <div className="row">
+        <div className="row gap-y-6">
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
           ))}
