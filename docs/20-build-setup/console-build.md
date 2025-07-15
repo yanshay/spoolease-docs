@@ -74,7 +74,6 @@ Add the wiring diagram image here:
 ![Components Placement inside Case](./console/console-components-placement.jpg)
 
 ## Congratulations! Build is Done
-## Congratulations!
 #### You are the proud owner of SpoolEse Console
 
 Continue to complete the setup using the [Console Setup Guide](console-setup.md)

@@ -4,7 +4,7 @@ id: console-ui
 ---
 
 # SpoolEase Console User Interface
-In addition to the [console-ui-inro](../quickstart/console-ui-intro)
+In addition to the [Console UI Intro](../quickstart/console-ui-intro)
 
 ## Switching Between Multiple AMS Devices
 
