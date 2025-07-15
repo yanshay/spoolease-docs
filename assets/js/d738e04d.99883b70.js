@@ -18,7 +18,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-40-full-guide-console-ui-md-d73.json
-const site_docs_40_full_guide_console_ui_md_d73_namespaceObject = /*#__PURE__*/JSON.parse('{"id":"full-guide/console-ui","title":"SpoolEase Console User Interface","description":"In addition to the console-ui-inro","source":"@site/docs/40-full-guide/console-ui.md","sourceDirName":"40-full-guide","slug":"/full-guide/console-ui","permalink":"/docs/full-guide/console-ui","draft":false,"unlisted":false,"tags":[],"version":"current","sidebarPosition":10,"frontMatter":{"sidebar_position":10,"id":"console-ui"},"sidebar":"documentationSidebar","previous":{"title":"Full Guide","permalink":"/docs/full-guide/"},"next":{"title":"Console Config","permalink":"/docs/full-guide/console-config"}}');
+const site_docs_40_full_guide_console_ui_md_d73_namespaceObject = /*#__PURE__*/JSON.parse('{"id":"full-guide/console-ui","title":"SpoolEase Console User Interface","description":"In addition to the Console UI Intro","source":"@site/docs/40-full-guide/console-ui.md","sourceDirName":"40-full-guide","slug":"/full-guide/console-ui","permalink":"/docs/full-guide/console-ui","draft":false,"unlisted":false,"tags":[],"version":"current","sidebarPosition":10,"frontMatter":{"sidebar_position":10,"id":"console-ui"},"sidebar":"documentationSidebar","previous":{"title":"Full Guide","permalink":"/docs/full-guide/"},"next":{"title":"Console Config","permalink":"/docs/full-guide/console-config"}}');
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(4848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -96,7 +96,7 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["In addition to the ", (0,jsx_runtime.jsx)(_components.a, {
         href: "../quickstart/console-ui-intro",
-        children: "console-ui-inro"
+        children: "Console UI Intro"
       })]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "switching-between-multiple-ams-devices",
