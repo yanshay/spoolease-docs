@@ -65,6 +65,7 @@ const toc = [{
 }];
 function _createMdxContent(props) {
   const _components = {
+    br: "br",
     code: "code",
     em: "em",
     h3: "h3",
@@ -80,13 +81,13 @@ function _createMdxContent(props) {
       children: "Basic Flow to Add a Spool to the System with Encoding"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: "Add the spool to inventory (preferably at purchase) with all information."
+        children: "Register the spool in the inventory application (preferably, but not required, at purchase) with all information."
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["Encode the tag together with measuring weight, and using the inventory record ID (weight requires the scale).", (0,jsx_runtime.jsx)(_components.br, {}), "\n", "(This can also take place weeks after resitering the spool in the inventory)"]
       }), "\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: "Encode the tag together with measuring weight, and using the inventory record ID (weight requires the scale)."
+        children: "Calibrate pressure advance (optional)."
       }), "\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: "Calibrate pressure advance."
-      }), "\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: "Re-encode from the slot configured with the pressure advance."
+        children: "Re-encode from the slot configured with the pressure advance (optional)."
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "using-a-spool-in-the-ams",

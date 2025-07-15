@@ -14,7 +14,7 @@
 /* unused harmony export searchResultLimits */
 /* harmony import */ var _Users_yanshay_ProgProj_ESP32_hamster_spoolease_docs_node_modules_lunr_lunr_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(8291);
 /* harmony import */ var _Users_yanshay_ProgProj_ESP32_hamster_spoolease_docs_node_modules_lunr_lunr_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_Users_yanshay_ProgProj_ESP32_hamster_spoolease_docs_node_modules_lunr_lunr_js__WEBPACK_IMPORTED_MODULE_0__);
-const removeDefaultStopWordFilter=[];const language=["en"];const searchIndexUrl="search-index{dir}.json?_=c154e268";const searchResultLimits=8;const fuzzyMatchingDistance=1;
+const removeDefaultStopWordFilter=[];const language=["en"];const searchIndexUrl="search-index{dir}.json?_=53f05d68";const searchResultLimits=8;const fuzzyMatchingDistance=1;
 
 /***/ })
 
