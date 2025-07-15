@@ -51,9 +51,8 @@ const FeatureList: FeatureItem[] = [
     Img: require("@site/static/img/nfc-configuration.png").default,
     description: (
       <>
-        NFC tags automatically configure your printer and adjust settings when
-        swapping filaments, streamlining your workflow and eliminating manual
-        input errors.
+        NFC tags automatically configure AMS settings when swapping filaments,
+        streamlining your workflow and eliminating manual input errors.
       </>
     ),
   },
@@ -84,18 +83,14 @@ const FeatureList: FeatureItem[] = [
 function Feature({ title, Svg, Img, description }: FeatureItem) {
   return (
     <div className="col col--4">
-      <div className="h-full rounded-2xl border border-gray-300 bg-white shadow-md p-0 pb-0 pt-4 transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg">
-        <div className="flex justify-center mb-0 aspect-square w-full">
+      <div className="h-full rounded-2xl border border-gray-300 bg-white shadow-md p-0 pb-0 pt-0 transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg">
+        <div className="flex justify-center mb-0 w-full px-12 pt-4 pb-2">
           {Svg && <Svg className="h-30 text-blue-600" role="img" />}
           {Img && (
-            <img
-              src={Img}
-              className="max-w-[70%] max-h-[70%] rounded-2xl object-contain"
-              alt=""
-            />
+              <img src={Img} className="rounded-2xl object-contain" alt="" />
           )}
         </div>
-        <div className="text-center px-3 -mt-21">
+        <div className="text-center px-3">
           <Heading as="h3" className="text-xl font-semibold mb-2">
             {title}
           </Heading>
@@ -109,7 +104,7 @@ function Feature({ title, Svg, Img, description }: FeatureItem) {
 export default function HomepageFeatures(): ReactNode {
   return (
     <section className={styles.features}>
-      <div className="container">
+      <div className="container !py-0">
         <div className="row gap-y-6">
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
