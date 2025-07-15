@@ -91,10 +91,6 @@ const toc = [{
   "id": "congratulations-build-is-done",
   "level": 2
 }, {
-  "value": "Congratulations!",
-  "id": "congratulations",
-  "level": 2
-}, {
   "value": "You are the proud owner of SpoolEse Console",
   "id": "you-are-the-proud-owner-of-spoolese-console",
   "level": 4
@@ -331,9 +327,6 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "congratulations-build-is-done",
       children: "Congratulations! Build is Done"
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "congratulations",
-      children: "Congratulations!"
     }), "\n", (0,jsx_runtime.jsx)(_components.h4, {
       id: "you-are-the-proud-owner-of-spoolese-console",
       children: "You are the proud owner of SpoolEse Console"
