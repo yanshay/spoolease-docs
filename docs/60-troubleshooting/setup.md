@@ -5,9 +5,23 @@ sidebar_position: 10
 
 ### Flashing
 
-#### Device erasing/flashing seem to fail again and again and/or the device appear to get into endless boots and/or appears to be bricked
-- see [Issue #18](https://github.com/yanshay/SpoolEase/issues/18) for resolution options and more details.
+#### Various issues during flashing
+At times, flashing may encounter problems for various reasons, unrelated to the SpoolEase code. These could stem from issues with the board, PC, USB port, cable, flashing tool, browser, etc.  
+Possible symptoms include:  
+- Flashing does not initiate  
+- Board repeatedly connects and disconnects from the PC  
+- Device enters a continuous reboot loop  
+- Device appears unresponsive or bricked  
+- And more  
 
+The discussions below offer several solutions to try — so far, every case has been resolved with the right approach.
+
+- [Issue #18](https://github.com/yanshay/SpoolEase/issues/18)
+- [Discussion #51](https://github.com/yanshay/SpoolEase/discussions/51)
+
+Also, a few simple things to try:
+- Try a different USB cable if available
+- Try a different computer if available
 ---
 
 ### Initialization
