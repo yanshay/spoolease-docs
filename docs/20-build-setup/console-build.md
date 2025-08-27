@@ -76,6 +76,6 @@ Add the wiring diagram image here:
 ## Congratulations! Build is Done
 #### You are the proud owner of SpoolEse Console
 
-Continue to complete the setup using the [Console Setup Guide](console-setup.md)
+Continue to complete the setup using the [Console Setup Guide](console-setup)
 
 ![SpoolEase Fully Built](./console/console-build-complete.jpg)

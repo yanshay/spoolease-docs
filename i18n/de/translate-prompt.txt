@@ -1,0 +1,2 @@
+Please translate the following to German. make it a 1-1 translation. Don't improve, don't make it shorter, don't make it longer, don't fix, don't rephrase unless required by language, don't restructure, don't modify content, don't try to make it better. Just translate it one to one and make it a very accurate german translation. Write the text in the same docusaurus format in a text block so I'll be able to copy/paste it.
+IMPORTANT: The terms "Console" and "Scale" are trademarks and can't be modified in the text. Use them as known terms not to be renamed.

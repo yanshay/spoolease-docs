@@ -1,0 +1,30 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.documentationSidebar.category.Required Components": {
+    "message": "Required Components",
+    "description": "The label for category Required Components in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.Build & Setup": {
+    "message": "Build & Setup",
+    "description": "The label for category Build & Setup in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.Quick Start": {
+    "message": "Quick Start",
+    "description": "The label for category Quick Start in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.Full Guide": {
+    "message": "Full Guide",
+    "description": "The label for category Full Guide in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.Concepts": {
+    "message": "Concepts",
+    "description": "The label for category Concepts in sidebar documentationSidebar"
+  },
+  "sidebar.documentationSidebar.category.Troubleshooting": {
+    "message": "Troubleshooting",
+    "description": "The label for category Troubleshooting in sidebar documentationSidebar"
+  }
+}

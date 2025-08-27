@@ -1,0 +1,22 @@
+{
+  "title": {
+    "message": "SpoolEase",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "SpoolEase Logo",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Documentation": {
+    "message": "Documentation",
+    "description": "Navbar item with label Documentation"
+  },
+  "item.label.Flash Product Page": {
+    "message": "Flash Product Page",
+    "description": "Navbar item with label Flash Product Page"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Navbar item with label GitHub"
+  }
+}

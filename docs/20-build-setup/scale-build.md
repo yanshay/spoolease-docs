@@ -2,6 +2,7 @@
 sidebar_position: 30 
 title: Scale Build
 ---
+# SpoolEse Scale Build Guide
 
 This guide provides step-by-step instructions for building SpoolEase Scale - the filament weight module of the SpoolEase system.
 
@@ -114,7 +115,7 @@ As mentioned earlier, this step is optional and only needed if you want to add a
 
 ### 6. Test Before Final Assembly
 
-At this point, test your configuration before closing the case. For this, refer to the [Scale Setup Guide](scale-setup.md) to ensure everything is functioning properly. This step is crucial as disassembly will require removing screws if troubleshooting is needed later.
+At this point, test your configuration before closing the case. For this, refer to the [Scale Setup Guide](scale-setup) to ensure everything is functioning properly. This step is crucial as disassembly will require removing screws if troubleshooting is needed later.
 
 ### 7. Final Assembly
 
@@ -160,5 +161,5 @@ At this point, test your configuration before closing the case. For this, refer 
 ## Congratulations!
 #### You are the proud owner of SpoolEse Scale
 
-Continue to complete the setup using the [Scale Setup Guide](scale-setup.md)
+Continue to complete the setup using the [Scale Setup Guide](scale-setup)
 
