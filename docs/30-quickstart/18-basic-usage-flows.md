@@ -7,7 +7,7 @@ title: Basic Usage Flows
 2. [Encode the tag](encode-tag-0.4-alpha) together with measuring weight, and using the inventory record ID (weight requires the scale).  
    (This can also take place weeks after resitering the spool in the inventory)
 3. Calibrate pressure advance (optional).
-4. [Re-encode](encode-tag-0.4-alpha) from the slot configured with the pressure advance (optional).
+4. [Re-encode](encode-tag-0.4-alpha#adding-pressure-advance-information) from the slot configured with the pressure advance (optional).
 
 ### Using a Spool in the AMS
 1. Scan the spool.  
