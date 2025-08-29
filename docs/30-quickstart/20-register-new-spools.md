@@ -7,6 +7,10 @@ sidebar_label: Register New Spools
 
 # Register New Spools
 
+:::important
+The flows described here apply to SpoolEase versions 0.4.0-alpha50 and later.
+:::
+
 Registering a spool with SpoolEase Inventory is straightforward.
 
 1. Browse to and log in to the inventory application at **http://\<spoolease-console-ip\>/inventory** .  

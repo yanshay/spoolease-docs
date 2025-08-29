@@ -4,6 +4,10 @@ id: encode-tag-0.4-alpha
 ---
 # Encode a Tag - Versions 0.4-alpha50+
 
+:::important
+The flows described here apply to SpoolEase versions 0.4.0-alpha50 and later.
+:::
+
 ## Base Tag Information (excluding Pressure Advance - K)
 
 The encoding process assumes the following:  

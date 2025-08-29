@@ -2,6 +2,11 @@
 sidebar_position: 18
 title: Basic Usage Flows
 ---
+
+:::important
+The flows described here apply to SpoolEase versions 0.4.0-alpha50 and later.
+:::
+
 ### Basic Flow to Add a Spool to the System with Encoding
 1. [Register the spool](register-new-spools) in the inventory application (preferably, but not required, at purchase) with all information.
 2. [Encode the tag](encode-tag-0.4-alpha) together with measuring weight, and using the inventory record ID (weight requires the scale).  
@@ -29,7 +34,7 @@ If the spool is not from the AMS (e.g., taken from storage):
 3. Press the left (green) button on the scale.  
 
 ### Searching for a Spool
-1. Navigate to http://_device-name_/inventory  
+1. Navigate to http://_device-name_/inventory (note it's http and not http**s**)
 2. Enter the security key (can be appended automatically with `#sk=_security-key_`).  
 3. Use filters or just look around to find the relevant spool, including by the amount of filament available.  
 
