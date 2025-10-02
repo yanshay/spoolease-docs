@@ -27,7 +27,11 @@ To load an external spool:
    - Start the process just like loading a spool into AMS: place the spool tag next to SpoolEase.
 
 2. **Configure the External Spool**  
-   - Press the **‘Staging’** box at the bottom left of the display. All available slots will flash.
-   - Then select **External Spool**.
+   - Press the **‘Staging’** box at the bottom left of the display.  
+   - Press "More...".
+   - Press "Configure Slot Manually", all slots will flash.
+   - Select **External**.
 
+:::tip
 This method can also be used with AMS slots as well, which is helpful when loading multiple spools at once. After scanning and configuring the slots manually, you can load all the spools together without waiting. It can also be useful if your tag is not attached to the spool and you forget to scan before you load and can configure later.
+:::

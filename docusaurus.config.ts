@@ -14,7 +14,7 @@ const config: Config = {
     // v4: true, // Improve compatibility with the upcoming Docusaurus v4
     v4: {
       useCssCascadeLayers: false,
-    }
+    },
   },
 
   // Set the production url of your site here
@@ -90,16 +90,24 @@ const config: Config = {
           position: "left",
           label: "Documentation",
         },
+        {
+          type: 'docsVersionDropdown',
+          versions: ['current', '0.4'],
+        },
         // { to: "/blog", label: "Blog", position: "left" },
-        { to:"https://www.spoolease.io/index.html", label: "Flash Product Page", position: "left" },
+        {
+          to: "https://www.spoolease.io/index.html",
+          label: "Flash Product Page",
+          position: "left",
+        },
         {
           href: "https://github.com/yanshay/spoolease",
           label: "GitHub",
           position: "right",
         },
         {
-          type: 'localeDropdown',
-          position: 'right',
+          type: "localeDropdown",
+          position: "right",
         },
       ],
     },

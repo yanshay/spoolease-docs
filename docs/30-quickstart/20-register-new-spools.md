@@ -4,17 +4,21 @@ id: register-new-spools
 title: Register New Spools
 sidebar_label: Register New Spools
 ---
+import inventoryAddSpool from '../img/inventory-add-spool.png';
+import inventoryAddSpoolK from '../img/inventory-add-spool-k.png';
 
 # Register New Spools
-
-:::important
-The flows described here apply to SpoolEase versions 0.4.0-alpha50 and later.
-:::
 
 Registering a spool with SpoolEase Inventory is straightforward.
 
 1. Browse to and log in to the inventory application at **http://\<spoolease-console-ip\>/inventory** .  
 2. Press the **"Add Spool"** button to add a spool.  
+
+<div style={{ display: 'flex', gap: '16px' }}>
+  <img src={inventoryAddSpool} alt="Inventory Add Spool Dialog" class="img-shadow" />
+  <img src={inventoryAddSpoolK} alt="Inventory Add Spool Dialog K Page" class="img-shadow" />
+</div>
+
 3. Fill in the information in the dialog that appears.  
 4. Take note of the spool ID. If you plan to encode it immediately, just remember it. If not, place a sticker with the ID on the spool until you encode it. (It can also be useful to leave the sticker on the spool for easier identification in storage.)
 

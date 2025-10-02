@@ -62,7 +62,8 @@ Add the wiring diagram image here:
 - Print the 3D model from [this link](https://makerworld.com/en/models/1138678).  
   - While printing, feel free to boost the model :smile:  
   - Optionally, glue the small pieces forming the antenna icon on the side, indicating where to place the tag. Ensure correct orientation before gluing, so check for fit first.
-- Optionally insert the microSD card into the slot in the WT32-SC01-Plus just below the USB connector. You should feel it click into place. To remove it, press it again and it will pop out. 
+- Format the SD card using the classic FAT file system. You can do this directly with your Bambulab printer. If formatting on a computer, ensure you select the original FAT format, not any of the newer variants introduced over the years.
+- Insert the microSD card into the slot in the WT32-SC01-Plus just below the USB connector. You should feel it click into place. To remove it, press it again and it will pop out.  
 - Place the WT32-SC01-Plus and PN532 in the positions shown in the image below.  
   - Make sure the antenna faces outward from the case.  
   - There is a hidden slot on the opposite side of the visible slot where the other end of the PN532 module fits.  

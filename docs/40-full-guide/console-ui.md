@@ -3,7 +3,7 @@ sidebar_position: 10
 id: console-ui
 ---
 
-# SpoolEase Console User Interface
+# Console User Interface
 In addition to the [Console UI Intro](../quickstart/console-ui-intro)
 
 ## Switching Between Multiple AMS Devices
@@ -39,8 +39,12 @@ Additional Notes:
 
 The **Settings Screen** allows you to manage and configure SpoolEase. Below are the available options and their functions:
 
-### Enable/Disable Web Config
-This option enables or disables the web-based configuration interface for SpoolEase. When enabled, you can access the configuration page from a browser by following the instructions that will appear on the screen. Disabling it ensures that no further modifications can be made remotely until re-enabled.
+### Web Config Instructions
+This will display a page with instructions on how to access the Console’s web configuration.  
+There are two ways to access it:  
+- **Scan SpoolEase NFC reader** with your mobile phone. This will open your mobile browser and automatically fill in the security key.  
+- **Manually enter the URL** displayed on the screen and use the security key as displayed there as well.
+- Manually enter the url as shown on the screen.
 
 ### Reset WiFi Credentials and Restart
 Selecting this option will erase the stored WiFi credentials and restart the device. After restarting, SpoolEase will enter WiFi setup mode, allowing you to connect it to a new network. This is useful if you need to switch networks or troubleshoot connectivity issues.

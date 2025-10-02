@@ -4,7 +4,7 @@ id: welcome
 title: Welcome
 sidebar_label: Welcome
 ---
-# Welcome to SpoolEase
+# Welcome to SpoolEase 0.5
 
 We’re excited to have you join the growing community of happy SpoolEase users!  
 

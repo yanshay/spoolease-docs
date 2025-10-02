@@ -3,6 +3,8 @@ sidebar_position: 13
 title: Scale UI Intro
 ---
 
+import scaleLoaded from '../img/scale-loaded.png';
+
 ## Intro to SpoolEase Scale "UI"
 
 Interaction with SpoolEase Scale occurs primarily through the SpoolEase Console display. 
@@ -14,7 +16,7 @@ The RGB LED communicates the following states, with earlier states taking preced
 
 These are the main colors to be aware of, more are detailed in the full guide.
 - **Flashing Red** - SpoolEase Scale is not connected to WiFi
-- **Constant Red** - SpoolEase Scale is not connected to SpoolEase Console
+- **Constant Red** - SpoolEase Scale is not connected to SpoolEase Console (but is connected to WiFi)
 - **Orange** - The scale is not calibrated
 - **Yellow** - Load detected on the scale, but weight is unstable
 - **Blue** - Load detected on the scale and reading is stable
@@ -28,6 +30,8 @@ A small rectangular information panel appears in the middle of the display, belo
 
 - **Yellow background** with weight value - Load detected but reading is unstable
 - **Blue background** with weight value - Load detected and reading is stable
+
+<img src={scaleLoaded} alt="Scale Display" class="img-shadow" />
 
 SpoolEase can display the weight of any object (typically a spool) and calculate net filament weight if the spool core weight is known from an NFC tag scan.
 
