@@ -7,7 +7,7 @@ title: Upgrading
 :::info
 If you are upgrading from previous versions, please read the following carefully:
 
-Starting with version **0.5**, an **SD card is required**.  
+Starting with version **0.5**, an **SD card is required** and is no longer optional.  
 Do not upgrade if you don’t have one available. The SD card must be formatted with the classic **FAT file system**. Your **Bambulab printer can format it** for you.
 
 ---
