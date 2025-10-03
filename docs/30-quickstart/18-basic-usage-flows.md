@@ -11,7 +11,7 @@ title: Basic Usage Flows
 
    When the spool is eventually to be used—possibly weeks or months later—open the package.  
 
-2. Attach an **NFC tag** to the spool and scan it in **SpoolEase** to [link the tag](link-tag) with the spool’s inventory record.
+2. Attach an **NFC tag** to the spool and scan it in **SpoolEase** to [link the tag](link-tag-to-spool) with the spool’s inventory record.
 
   :::tip
    The following step is especially important to do at this stage if the spool is still new and unused to record the weight before use.
