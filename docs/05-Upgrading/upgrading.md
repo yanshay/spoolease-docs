@@ -4,7 +4,6 @@ title: Upgrading
 ---
 # Upgrading From Previous Versions
 
-:::info
 If you are upgrading from previous versions, please read the following carefully:
 
 Starting with version **0.5**, an **SD card is required** and is no longer optional.  
@@ -14,7 +13,9 @@ Do not upgrade if you don’t have one available. The SD card must be formatted 
 
 ### Upgrading from Version 0.4 Alpha
 
-- **Important:** Before flashing the firmware, **back up the `STORE` and `STATE` folders** to your computer. This is essential if you want the option to downgrade later or encounter serious issues with the new version. You’ll need to remove the SD card for this.  
+:::info
+- **Important:** Before flashing the firmware, **copy the `STORE` and `STATE` folders** to your computer. This is essential if you want the option to downgrade later or encounter serious issues with the new version. You’ll need to remove the SD card from the Console for this.  
+:::
 - On the first run after upgrading, the **inventory will be automatically upgraded**. A progress display will be shown, followed by a success or failure message.  
 - For some spools, the **K setting (pressure advance)** may not be upgraded, depending on the specific alpha version in which they were imported.  
   - You can still view the original K configuration by scanning old tags with your mobile phone.  
@@ -76,5 +77,4 @@ You can restore the inventory from a backup (using the Backup button) using the 
 
 ---
 
-⚠️ **This was only a short summary of the critical points to know when upgrading. For more complete information, please review the rest of the documentation.**
-:::
+⚠️ **This was only a short summary of the critical points to know when upgrading. For more complete information, please review the rest of the documentation, at least the [Quick Start](../quickstart) section.**

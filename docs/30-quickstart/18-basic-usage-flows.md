@@ -19,12 +19,12 @@ title: Basic Usage Flows
 3. During the linking process, **weigh the spool** using SpoolEase Scale (if available).  
 
 4. **Calibrate pressure advance** (optional).  
-   Perform calibration using your slicer. Once calibration is complete, open the spool’s inventory record and select the appropriate pressure advance configuration for your printers and nozzles.
+   Perform calibration using your slicer. Once calibration is complete, edit the spool’s inventory record and select the appropriate pressure advance setting for your printers and nozzles.
 
 5. **Encode the tag** (optional).  
    This writes the current spool information to the NFC tag, allowing you to view it by scanning with a mobile phone.  
-   Encoding is a snapshot—future changes in the inventory will not appear automatically.  
-   You can repeat encoding anytime to refresh the tag with updated information.
+   Encoding is a snapshot — future changes in the inventory will not appear automatically.  
+   You can repeat encoding anytime to update the tag with the latest spool information.
 
 ---
 
