@@ -15,7 +15,7 @@ To use the filament configuration feature, you have two options:
 
 If you prefer to keep using newer firmware with Cloud Connected mode, you can still use SpoolEase without filament configuration. Inventory management, spool weight tracking, and other features will continue to work normally.
 
-Below are the latest firmware versions for each Bambulab printer line that do **not** include the Authorization restrictions, so using versions up to (and including) these will allow you to fully enjoy all SpoolEase features and Cloud Connected mode.
+Below are the latest firmware versions for each Bambulab printer line that do **not** include the Authorization restrictions, so using versions up to (and including) these will allow you to fully enjoy all SpoolEase features and Cloud Connected mode without switching to **Lan Only** mode with **Developer Mode** enabled.
 
 - **A1:** `01.04.00.00`  
 - **P1:** `01.08.01.00`  
