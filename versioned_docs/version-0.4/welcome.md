@@ -19,5 +19,6 @@ This documentation is here to guide you through every step:
 - [**Full Guide**](./full-guide) — A complete, in-depth manual to unlock the full potential of your SpoolEase.  
 - [**Concepts**](./concepts) — Helpful explanations of key terms and ideas for understanding the finer details.  
 - [**Troubleshooting**](./troubleshooting) — Common problems and proven solutions to keep things running smoothly.  
+- [**Support SpoolEase Project**](./support-spoolease) — If you'd like to support the project.  
 
 Enjoy your SpoolEase journey!
