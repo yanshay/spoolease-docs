@@ -1,31 +1,41 @@
 # Spool Weight Tracking
 
-**Spool Weight Tracking** is one of the key features of SpoolEase.
+**Spool Weight Tracking** represents a core capability within SpoolEase.
 
-To get best in class weight tracking SpoolEase employs two complementory underlying methods for telling spool weight:
-- Using SpoolEase scale to measure spool's weight
-- Monitoring print progress and calculating the amount of filament consumed by the printer as print progress
+To achieve optimal weight tracking accuracy, SpoolEase utilizes two complementary approaches for determining spool weight:
 
-Each method has its pros/cons and together they provide a good continuous visibility into the spool weight.
+- Measuring spool weight directly using the SpoolEase scale
+- Tracking print progress and computing filament consumption based on printer activity
 
-On top of that the measuring methods, SpoolEase allows you to provide additional information that will allow it to automatically calculate the amount of filament left on the spool. This information is **Empty Weight**, **Label Weight**, **Full Weight**.
-SpoolEase employs a few calculation methods depending on the information it is fed with calculates the **Net Weight* if possible.
+Each approach offers distinct advantages and limitations, and their combined use provides continuous, reliable visibility into spool weight status, including as it is used and when inside AMS.
 
-The Full Weight can be measured when the spool is still new and unused, either when linking a tag or also later using "Advance Weight" in the staging operations menu.
+Beyond these measurement techniques, SpoolEase supports additional configuration parameters that enable automatic calculation of remaining filament quantity. These parameters include **Empty Weight**, **Label Weight**, and **Full Weight**.
 
-The other values can be provided when adding the spool information in the inventory application.
+Based on the available input data, SpoolEase applies various calculation methods to determine the **Net Weight** whenever possible.
 
-### Weighting Using Scale
-This is the most accurate way to tell what the spool weight is. The main con of this method is that it's an extra step. Therefore SpoolEase tries to make it as easy as possible. 
-Measuring the weight is done when the spool information is loaded in the staging area. Then, pleacing the spool on the scale and pressing it's button takes the measurement. To simplify this even further, when a spool is taken out of the AMS, its information is automatically loaded into the staging area. That's also a great point in time to measure weight, so you know what's the accurate weight when you want to use this spool next time. So a weight workflow ends up being taking a spool after print is done from AMS, placing it on the scale and pressing the scale's button once the weight has stabilized. 
-The weight information is immediately updated in the inventory.
+The Full Weight can be captured when a spool is new and unused, either during tag linking or subsequently through the "Advance Weight" option in the staging operations menu.
 
-### Weight Calculation While Printing
-While weighting using the scale is accurate and easy it is impossible to perform when the spool is being used and inside AMS. Many times spools stay in the AMS for many prints and it's important to track the updated weight.
-For this purpose, SpoolEase monitors the print and as the print progress, layer by layer, color by color, it calculates the consumed weight and decreases the spool weight automatically. Note that this is an estimate (though a pretty good one) as it relies on filament density variable as specified in the filament settings. This can differ betweeon one filament to antoher and practically no one updates it. But filaments of certain type are close enough for this approach to be accurate enough for practical use.
-Con of relying purely on this method is that when filament break, stuck in AMS, being cut for whatever reason, it does not consider that. Also, certain printing operations (such as the calibrations performed by the printer before prints) are not reported and not counted in.
-The benefit of this approach is that you can monitor how much filament is left as it is being consumed by the printer, both in the inventory as well as in the spool information by simply pressing the slot in the console.
+Additional parameters can be specified when entering spool details in the inventory application.
 
+### Scale-Based Weighing
+
+This method provides the most accurate determination of spool weight. Its primary limitation is that it requires an additional manual step. SpoolEase addresses this by streamlining the weighing process as much as possible.
+
+**Weight measurement occurs when spool tag is scanned and its information is loaded into the staging area**. The weighting process involves placing the spool on the scale and pressing the scale button to capture the measurement.  
+
+To further simplify this workflow, SpoolEase automatically loads spool information into the staging area when a spool is removed from the AMS. This timing is ideal for weight measurement, ensuring accurate weight data is available for the next use. The complete workflow consists of removing a spool from the AMS after printing completes, placing it on the scale, and pressing the scale button once the weight reading stabilizes.
+
+Weight information is immediately synchronized with the inventory system.
+
+### Weight Calculation During Printing
+
+While scale-based weighing delivers accuracy and simplicity, it cannot be performed when a spool is actively in use within the AMS or loaded into the external feed. Spools frequently remain in the AMS across multiple print jobs, making continuous weight tracking essential.
+
+To address this requirement, SpoolEase monitors active print jobs and calculates consumed weight as printing progresses through each layer and color change, automatically decreasing the recorded spool weight. This calculation represents an estimate, albeit a reliable one, as it depends on the filament density parameter specified in filament settings. This value can vary between filaments, and in practice, users rarely adjust it. However, filaments of a given type have sufficiently similar densities to make this approach accurate enough for practical applications.
+
+The limitation of relying exclusively on this method is that it cannot account for filament breaks, jams within the AMS, manual cutting, or other disruptions. Additionally, certain printer operations, such as pre-print calibration routines, are not reported and therefore not included in consumption calculations.
+
+The advantage of this approach is the ability to monitor remaining filament in real-time as the printer consumes it, with visibility both in the inventory system and through spool information displayed when selecting a slot in the console.
 
 ## Spool Weight Glossary
 
@@ -55,14 +65,6 @@ The amount of filament used for printing since the last time the spool was weigh
 
 **Consumed Since Load (to AMS)**  
 The amount of filament used since the spool was loaded into the AMS (Automatic Material System).
-
-## Weighting a Spool
-
-## Updating Spool Weight
-
-## Weight Tracking While Printing
-
-## Net Weight Calculations
 
 ## Calibrating the Scale
 
