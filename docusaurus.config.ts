@@ -90,10 +90,10 @@ const config: Config = {
           position: "left",
           label: "Documentation",
         },
-        {
-          type: 'docsVersionDropdown',
-          versions: ['current', '0.4'],
-        },
+        // {
+        //   type: 'docsVersionDropdown',
+        //   versions: ['current', '0.4'],
+        // },
         // { to: "/blog", label: "Blog", position: "left" },
         {
           to: "https://www.spoolease.io/index.html",

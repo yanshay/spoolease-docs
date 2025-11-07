@@ -57,6 +57,14 @@ No encoding or editing while encoding are required anymore.
 
 ---
 
+### Custom Slicer Filaments
+
+If you previously configured custom filaments in SpoolEase via the Web Config, you’ll need to redo this setup in version 0.5.0, as it now requires additional information. Access the Web Config from the desktop you use with your slicer (BambuStudio or OrcaSlicer) at: `http://<console-device-ip>/config` .
+
+⚠️ Note: Use http, and not https.
+
+---
+
 ### Additional Changes in Version 0.5
 
 - **K (pressure advance)** is now configured directly in the inventory by editing the spool. A new tab allows configuration per printer and nozzle, and future updates will support extruder/nozzle types (e.g., H2 series).  

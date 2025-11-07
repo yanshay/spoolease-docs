@@ -62,7 +62,7 @@ const FeatureList: FeatureItem[] = [
     Img: require("@site/static/img/bambulab-compatibility.png").default,
     description: (
       <>
-        Fully supports Bambulab X1, P1, and A1 product lines, enhancing your
+        Supports Bambulab X1, P1, A1, H2, P2 product lines, enhancing your
         existing printer's capabilities.
       </>
     ),

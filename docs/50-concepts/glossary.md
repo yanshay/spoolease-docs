@@ -43,4 +43,4 @@ A feature where the device emulates an NFC tag, allowing a mobile phone to scan 
 The process of writing spool information onto an NFC tag so that scanning it with a mobile device opens the spool’s information in a browser.
 
 
-**[Spool Weight Glossary](../full-guide/spool-weight#spool-weight-glossary)**
+**[Spool Weight Glossary](../full-guide/spool-weight-tracking#spool-weight-glossary)**

@@ -84,29 +84,6 @@ If the spool’s tag was encoded:
 
 ### Used-Up Spool
 
-You have many options how to deal with used up spools and it depends on several factors:
-- Will you use a spool of that type in the future?
-- Will you use the spool itself (so the cardboard/plastic empty spool)
-- Will/Can you reuse the tag (stickers not always can be removed properly)
-- Is it important to you to have tracking as to when spool was added to the inventory? (recommended)
-
-The recommended approach is NOT to reuse a spool-record and whenever starting a new spool (even in case of refills, re-spools) also create a new spool-record which can be easily done by duplicating an existing record.
-
-If you plan to get the same or similar spool in the future you can avoid erasing the used-up spool-record and use it as the basis for a new spool using the "Add Similar" option available when editing a spool.
-
-Therefore:
-- If you want to unlink a tag from the record, just scan it into staging, press staging, then More... and then Unlink Tag. The tag can then be used for another spool. 
-- If you don't need the spool record you can simply erase it in the Inventory. This will also free up the tag to be used as a new tag. 
-:::tip
-If the tag was encoded with information it's helpful to also erase the information so not to confuse you when you scan the tag in the future.
-:::
-
-If you don't care about creating a new spool-record for whatever reason, you just need to update the record itself correctly as you load new material onto the spool, depending on how exactly you do it. It just involves too many small details that are too complex to explain here. Do it at your own risk.
-
-
-
-### Used-Up Spool
-
 You have several options for handling used-up spools. The right approach depends on a few factors:
 
 - Will you use the same type of spool again in the future and want to reuse the information filled in the record?
@@ -135,6 +112,5 @@ In both cases, you can still have the tag on the physical spool, you only unlink
 If the tag was encoded with information, it’s best to erase the data as well to avoid confusion when scanning it in the future.
 :::
 
----
 
 If you still decide not to create a new spool record for a refill or re-spool, make sure to **manually update the existing record** correctly.  This involves many small details, so proceed at your own risk.
