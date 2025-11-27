@@ -22,10 +22,13 @@ In some cases, such as during an OTA update, navigation may be temporarily disab
 <img src={terminal} alt="Terminal Screen" class="img-shadow" />
 
 - **Main Spools View** – The primary interface for managing spools  
+
+Note: On dual-extruder printers (H2D, H2C), the external spool will appear as "Ext Right" or "Ext Left." To change which extruder’s external feed is displayed, tap the "Ext" label.
 <img src={main} alt="Main Spools Screen" class="img-shadow" />
 
 - **Settings** – Configuration options  
-  The Settings screen has two tabs. Switch between them using the buttons labeled 1 and 2 on the left.
+
+The Settings screen has two tabs. Switch between them using the buttons labeled 1 and 2 on the left.
 
 <img src={settings1} alt="Settings Screen Page 1" class="img-shadow" />
 <img src={settings2} alt="Settings Screen Page 2" class="img-shadow" />
