@@ -48,5 +48,5 @@ For accurate weight tracking, it’s important to **link the tag and weigh the s
 6. **Next Steps**  
 You can now use the spool with SpoolEase. Common follow-up actions include:
 
-- **Encoding tag information** to enable [Virtual Tag](view-tag-info) functionality. This lets you view the spool’s details on your mobile phone by scanning the tag.  
+- **Encoding tag information** to enable [Virtual Label](view-tag-info) functionality. This lets you view the spool’s details on your mobile phone by scanning the tag.  
 - **Calibrating K (pressure advance)**. This consumes filament, so it should be done **after you weighted the spool in its full state as described above**. Once calibration is complete, set the calibrated K value in the spool’s edit dialog in the inventory application.

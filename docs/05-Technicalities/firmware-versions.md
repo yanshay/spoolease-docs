@@ -4,7 +4,7 @@ Throughout 2025, Bambulab released firmware updates that introduced a software m
 
 One SpoolEase feature - **slot filament configuration**, rely on these MQTT messages to set filament information for AMS slots and the External Spool Holder.
 
-Other features — such as **Inventory Management**, **Weight Tracking** (using both SpoolScale and print progress), **Virtual Tag on Mobile**, **visibility into AMS filaments** and others — are not affected by this change.
+Other features — such as **Inventory Management**, **Weight Tracking** (using both SpoolScale and print progress), **Virtual Label on Mobile**, **visibility into AMS filaments** and others — are not affected by this change.
 
 To use the filament configuration feature, you have two options:
 

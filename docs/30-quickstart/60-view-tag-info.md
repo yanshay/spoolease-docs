@@ -7,4 +7,4 @@ If you want to view filament information directly from the spool, you can **enco
 After this, whenever you scan the tag with your mobile phone, it will open your mobile browser to display the spool information.  
 Make sure **NFC is enabled** (on Android, it may be disabled by default).
 
-<img src={virtualTag} alt="Virtual Tag" class="img-shadow" />
+<img src={virtualTag} alt="Virtual Label" class="img-shadow" />

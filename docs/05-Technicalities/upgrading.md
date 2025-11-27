@@ -32,7 +32,7 @@ Version 0.5 introduces a **new approach to SpoolEase**, significantly simplifyin
 - The **NFC tag now acts only as an identifier** for the spool data stored in the **inventory on the SD card**.  
 - When a tag is scanned, it is used only to **identify** the spool. The data stored on the tag itself is **no longer used**, except for importing old tags (explained below).  
 - **Encoding tags is no longer required.** To link a new tag, simply scan an unlinked tag and follow the linking wizard.  
-- You can still **encode information on a tag** if you want to be able to scan it later with a mobile phone and view the spool details as they were at the time of encoding. This is referred to as 'Virtual Tag'.
+- You can still **encode information on a tag** if you want to be able to scan it later with a mobile phone and view the spool details as they were at the time of encoding. This is referred to as 'Virtual Label'.
 - Because all information is stored in the inventory on the SD card, it is recommended to use the **Backup** button periodically to save the inventory to your personal computer. This is a quick and simple operation.
 
 ---

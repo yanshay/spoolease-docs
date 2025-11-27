@@ -17,7 +17,7 @@ It features:
 - A complete **spool inventory management system** - keeping your spools organized
 - **Precise filament weight tracking** using (1) weight scale, (2) print usage monitoring, and (3) a smart workflow - so you can tell how much filament is available in every spool
 - **Automatic slot configuration** for material, color, pressure advance (K)
-- A **Virtual Spool Tag** for viewing spool info on your mobile device
+- A **Virtual Spool Label** for viewing spool info on your mobile device
 - Compatibility with your slicer filament settings
 - Even serves as **backup for your pressure advance settings** (for when the printer loses them — and yes, it happens)
 - More ...
