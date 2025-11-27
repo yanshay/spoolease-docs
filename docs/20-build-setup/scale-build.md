@@ -89,6 +89,10 @@ As mentioned earlier, this step is optional and only needed if you want to add a
    - Install wires so they come out on the side opposite to the antenna (not the electronics side) (**image below is a bad example and doesn't follow this recommendation**)
    - Configure the PN532 for SPI mode: with board poitioned so dip-switches on bottom right, set left switch down and right switch up
 
+:::warning
+IMPORTANT: Many users miss the last step above about the dip-switches. Make sure you do it now !
+:::
+
 ![PN532 Wiring](./scale/scale-pn532-wiring.jpg)
 
 2. **Connect PN532 to ESP32-S3:**

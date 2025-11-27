@@ -21,4 +21,5 @@ Below are the latest firmware versions for each Bambulab printer line that do **
 - **P1:** `01.08.01.00`  
 - **X1:** `01.08.02.00`  
 - **H2:** All H2 printers include Authorization Control.
+- **P2:** All P2 printers include Authorization Control.
 

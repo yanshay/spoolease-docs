@@ -32,6 +32,17 @@ The setup process is similar to the one you followed for the SpoolEase Console, 
 The easiest way to flash the firmware is through Chrome or Edge (other browsers are not supported).
 
 1. Connect the SpoolEase Scale device to your computer using a USB-C cable. IMPORTANT: Use the UPPER Usb-C connector on SpoolEase Scale. UPPER is when the board is positioned in its place the 3D printed model, with the two connectors on the left and the pins are facing away from you.
+
+:::warning
+Recently, new variants of these boards have become available.
+
+Some can be flashed using the bottom connector instead of the top one. In this case, WiFi setup through the desktop will not occur automatically after flashing, so you’ll need to follow the alternative WiFi setup instructions below.
+
+Other variants require holding the board’s boot button while starting the installation; the top connector may still be used in this case, if not then the bottom one, board dependant.
+
+Be patient and try different flashing methods following these guidelines. You can find additional instructions for using the boot button by searching online.
+:::
+
 2. Visit [https://www.spoolease.io/scale.html#firmware](https://www.spoolease.io/scale.html#firmware)
 3. Press the "New Install" button for the version you want to flash at the bottom of the page.
 4. Select the correct port for the board and click **Connect**.
@@ -75,6 +86,9 @@ The easiest way to flash the firmware is through Chrome or Edge (other browsers 
 2. Connect to the WiFi network **"SpoolEaseScale"**.
    - On mobile devices, wait a few moments; the device may auto-open a setup page similar to airport WiFi.
    - If not, browse to http://192.168.2.1/config.html (note: use http NOT https, you must type http).
+:::warning
+The WiFi SSID may take some time to appear—sometimes several minutes. If it doesn’t show up, try turning your mobile WiFi off and on again. Moving your device closer or around the unit can also help. Be patient; the SSID will appear eventually.
+:::
 3. Enter "Change-Me!" as Security Key and click **Verify Key**. A "Security Key Validated" message should appear.
 4. It is recommended to change the security key by filling in the "Set a Fixed Key" field and pressing "Apply" before configuring WiFi information.
 5. Fill in the WiFi information (SSID and Password) and press Apply.
