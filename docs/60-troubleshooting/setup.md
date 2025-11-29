@@ -12,16 +12,42 @@ Possible symptoms include:
 - Board repeatedly connects and disconnects from the PC  
 - Device enters a continuous reboot loop  
 - Device appears unresponsive or bricked  
-- And more  
 
 The discussions below offer several solutions to try — so far, every case has been resolved with the right approach.
 
 - [Issue #18](https://github.com/yanshay/SpoolEase/issues/18)
 - [Discussion #51](https://github.com/yanshay/SpoolEase/discussions/51)
 
-Also, a few simple things to try:
+#### A message prompting you to press the boot button may appear when attempting to flash.
+  - Sometimes simply trying again resolves the issue.
+  - Occasionally, you may need to select a different port (even when using the same connector). Ports can have very similar names sometimes differing by just one letter—but behave differently.
+  - The Scale ESP32 board has two connectors. Switching to the other connector can sometimes allow flashing to succeed.
+  - For some Scale board variants, pressing the boot button is required to flash. The Scale ESP32S3 board includes a boot button. Try holding it while starting the installation. If it helps it is usually with the bottom connector.
+  - For the Console board, the boot button is harder to access. More details are available in [Discussion #51](https://github.com/yanshay/SpoolEase/discussions/51).
+
+#### Chrome/Edge may shut down, usually at the end of flashing.  
+  - This is not uncommon and is due to a bug in the browser. If it happens at the end of flashing, the flash likely succeeded. It can also happen mid-flash.  
+  - If this occurs, simply reopen the flashing page, press the flash button again, and check if logs from the device appear.
+
+#### Also, a few simple things to try:
 - Try a different USB cable if available
 - Try a different computer if available
+---
+
+## WiFi Configuration
+
+#### WiFi Setup Doesn't Show Up on the Desktop
+
+- If you had to flash the Scale using the bottom connector, the WiFi setup will not appear. In this case, use the alternative WiFi setup method.  
+- In other cases, try pressing the flash button again, choose to see logs, and then press back on that page. Often, this will make the option to configure WiFi appear.  
+- If none of these methods work, use the alternative WiFi setup as described on the setup page.
+
+#### Can't See the Device's WiFi SSID in the Alternative WiFi Setup Method
+
+- It may take some time for the WiFi network to appear.  
+- Turning your mobile WiFi off and on may speed up discovery.  
+- Try adjusting the distance or moving around your device until the WiFi is discovered.
+
 ---
 
 ### Initialization
