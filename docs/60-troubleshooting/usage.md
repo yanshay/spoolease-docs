@@ -4,12 +4,18 @@ sidebar_position: 20
 
 # Usage Troubleshooting
 
-#### Connectivity Issues
+#### WiFi Connectivity Issues
 - Keep Console and Scale at a distance to avoid interference, which may lead to:
   - Repeated disconnections of the Scale from the Console
   - Connectivity problems between the Console and the Printer, causing slow responses
   - Other related issues
 
+
+### Printer Connectivity Issues
+
+For P1/A1 printers, there is a limit to the number of simultaneous connections they support. If you have multiple integrations (e.g. HA, Panda, XTouch) running alongside several instances of Bambu Studio, SpoolEase may fail to connect.  
+
+- Try shutting down other integrations and closing extra Bambu Studio instances to see if this resolves the issue. Then manage the number of active integrations accordingly.
 
 #### Unreliable encoding
 - Use a high-quality, stable and strong enough USB power adapter.
