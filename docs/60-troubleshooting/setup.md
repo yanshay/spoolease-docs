@@ -12,6 +12,7 @@ Possible symptoms include:
 - Board repeatedly connects and disconnects from the PC  
 - Device enters a continuous reboot loop  
 - Device appears unresponsive or bricked  
+- Erasing stops midway  
 
 The discussions below offer several solutions to try — so far, every case has been resolved with the right approach.
 
@@ -30,8 +31,10 @@ The discussions below offer several solutions to try — so far, every case has 
   - If this occurs, simply reopen the flashing page, press the flash button again, and check if logs from the device appear.
 
 #### Also, a few simple things to try:
+- Try different USB ports; on some computers, USB 3.0 ports may not work, while USB 2.0 ports do
 - Try a different USB cable if available
 - Try a different computer if available
+
 ---
 
 ## WiFi Configuration

@@ -3,6 +3,8 @@ title: Scale Config
 ---
 For configuration, SpoolEase Scale offers a web application similar to SpoolEase Console.
 
+Some settings in Scale Config also appear in [Console Web Config](console-web-config), and their details are documented there.
+
 ## SpoolEase Scale Web Configuration
 
 SpoolEase Scale has no display so the security key isn't visible on the device, so you'll need to remember it. For convenience, you can use the same fixed key you configured for SpoolEase Console, which is displayed when web configuration is activated on that device.

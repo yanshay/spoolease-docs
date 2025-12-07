@@ -14,10 +14,10 @@ SpoolEase is a smart add-on system for Bambu Lab 3D printers that adds intellige
 
 It features:
 - NFC tags for automatic spool identification
-- A complete **spool inventory management system** - keeping your spools organized
+- Complete **spool inventory management system** - keeping your spools organized
 - **Precise filament weight tracking** using (1) weight scale, (2) print usage monitoring, and (3) a smart workflow - so you can tell how much filament is available in every spool
 - **Automatic slot configuration** for material, color, pressure advance (K)
-- A **Virtual Spool Label** for viewing spool info on your mobile device
+- **Virtual Spool Label** for viewing spool info on your mobile device
 - Import and support for Bambu Lab Spools RFID tag
 - Compatibility with your slicer filament settings
 - Even serves as **backup for your pressure advance settings** (for when the printer loses them — and yes, it happens)
@@ -41,3 +41,7 @@ This documentation is here to guide you through every step:
 - [**Support SpoolEase Project**](./support-spoolease) — If you'd like to support the project.  
 
 Enjoy your SpoolEase journey!
+
+## Show Your Appreciation
+A **tremendous** amount of effort has gone into this project and continues to go in.  
+If you find it valuable or helpful, please **Boost** the 3D models on MakerWorld and ⭐ **Star** the GitHub repo.

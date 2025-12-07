@@ -6,3 +6,5 @@ sidebar_label: Register Bambu Lab Spools
 ---
 
 Until documentation is detailed, just scan a Bambu Lab Tag and follow the instructions in the user interface.
+
+
