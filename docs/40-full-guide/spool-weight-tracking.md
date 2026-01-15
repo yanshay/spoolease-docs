@@ -37,6 +37,13 @@ The limitation of relying exclusively on this method is that it cannot account f
 
 The advantage of this approach is the ability to monitor remaining filament in real-time as the printer consumes it, with visibility both in the inventory system and through spool information displayed when selecting a slot in the console.
 
+:::note
+When a spool is considered new and unused, the Net weight field in the inventory displays the label weight as the net weight (in parentheses).  
+Once a spool is linked to a tag, it is considered in use. From that point on, the system no longer assumes the spool is unused and rely on the actual weight measured by the scale to calculate the net weight. This means that if a spool is tagged but its weight is not measured for any reason, the net weight field will appear empty.  
+This is especially relevant when importing a ambu Lab spool while it is still packaged and going through the link step. In this case, even though the spool is still in its closed package, no net weight will be shown.  
+If you want to import a Bambu Lab spool while it is still packaged, without weighing it, and still see the net weight as the label weight, skip the link step on import and link the tag only when you actually start using the spool. With Bambu Lab spools this is a good idea any way since there are two tags and you need to know which tag you linked to which is difficult when it's still in the package.
+:::
+
 ## Spool Weight Glossary
 
 **Label Weight**  

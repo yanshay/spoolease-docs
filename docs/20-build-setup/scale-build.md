@@ -10,7 +10,7 @@ This guide provides step-by-step instructions for building SpoolEase Scale - the
 - To enable the front RGB LED functionality, solder a small jumper (two adjacent pads) on the board.
 - This jumper is located directly adjacent to the large RGB LED, marked with 'RGB' label nearby.
 - Only a minimal amount of solder is required for this connection.
-- Verify successful bridging by using a multimeter to check continuity between pin 48 and any of the four red pins (only one would show continuity).
+- Verify successful bridging by using a multimeter to check continuity between pin 48 and any of the four led pins (only one would show continuity).
 - While not mandatory, this step is highly recommended as it provides valuable status feedback from the SpoolEase Scale, particularly when not connected to the SpoolEase Console.
 - Check the images below - first one Before bridging and the other After bridging
 

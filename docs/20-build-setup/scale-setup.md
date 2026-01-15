@@ -49,6 +49,11 @@ Be patient and try different flashing methods following these guidelines. You ca
 5. A dialog titled "SpoolEaseScale" should appear. Click **Install SpoolEaseScale** and confirm by pressing **Install**.
 6. The device will erase old data (displaying "Erasing") and then install the new firmware (showing progress). This may take a few minutes.
 7. Once installation is complete, the device will restart. You'll see an "Installation complete!" message in the browser and WiFi setup instructions will follow.
+
+:::info
+If you face issues flashing, please refer to the [Setup Troubleshooting](../troubleshooting/setup) section
+:::
+
 8. There are now two ways to configure WiFi. If your network is accessible where you installed the firmware, follow the **WiFi Setup - Easy Way** section. Otherwise, skip to **Alternative WiFi Setup**.
 
 ---

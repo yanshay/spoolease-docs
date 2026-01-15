@@ -19,6 +19,7 @@ It features:
 - **Automatic slot configuration** for material, color, pressure advance (K)
 - **Virtual Spool Label** for viewing spool info on your mobile device
 - Import and support for Bambu Lab Spools RFID tag
+- Software support for OpenPrintTag (see support scope in [Register OpenPrintTag Spools](quickstart/register-openprinttag-spools))
 - Compatibility with your slicer filament settings
 - Even serves as **backup for your pressure advance settings** (for when the printer loses them — and yes, it happens)
 - More ...

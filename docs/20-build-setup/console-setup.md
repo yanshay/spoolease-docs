@@ -37,6 +37,11 @@ The easiest way to flash the firmware is through Chrome or Edge (other browsers 
 5. A dialog titled "SpoolEase" should appear. Click **Install SpoolEase** and confirm by pressing **Install**.
 6. The device will erase old data (displaying "Erasing") and then install the new firmware (showing progress). This may take a few minutes.
 7. Once installation is complete, the device will restart. You’ll see an "Installation complete!" message on the browser and WiFi setup instructions on the device screen.
+
+:::note
+If you face issues flashing, please refer to the [Setup Troubleshooting](../troubleshooting/setup) section
+:::
+
 8. There are now two ways to configure WiFi. If your network is accessible where you installed the firmware, follow the **WiFi Setup - Easy Way** section. Otherwise, skip to **Alternative WiFi Setup**.
 
 ---

@@ -22,3 +22,11 @@ For P1/A1 printers, there is a limit to the number of simultaneous connections t
 - Try a different USB cable.
 - Don’t place the tag directly on the PN532 — keep it about 1 cm away for reliable encoding.
 - Ensure you’re using a compatible tag: NTAG215 only. While Mifare is supported for normal use, it's currently not supported for Encoding the virtual label. FeliCa tags are not supported at all.
+
+#### Slow User Interface
+
+If find the user interface to be slow and respond slow, delayed response of SpoolEase to printer activity, check that you didn't activate extended printer logs in the SpoolEase Console Web Config.
+
+#### Every few hours SpoolEase hangs/stop functioning
+
+Try a better power supply 
