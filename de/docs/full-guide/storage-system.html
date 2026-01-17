@@ -5,7 +5,7 @@
 <meta name="generator" content="Docusaurus v3.8.1">
 <title data-rh="true">Storage System | SpoolEase</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://docs.spoolease.io/de/docs/full-guide/storage-system"><meta data-rh="true" property="og:locale" content="de"><meta data-rh="true" property="og:locale:alternate" content="en"><meta data-rh="true" name="docusaurus_locale" content="de"><meta data-rh="true" name="docsearch:language" content="de"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Storage System | SpoolEase"><meta data-rh="true" name="description" content="This documentation is of a pre-release feature and will be available only in version 0.6"><meta data-rh="true" property="og:description" content="This documentation is of a pre-release feature and will be available only in version 0.6"><link data-rh="true" rel="icon" href="/de/img/spoolease-logo.png"><link data-rh="true" rel="canonical" href="https://docs.spoolease.io/de/docs/full-guide/storage-system"><link data-rh="true" rel="alternate" href="https://docs.spoolease.io/docs/full-guide/storage-system" hreflang="en"><link data-rh="true" rel="alternate" href="https://docs.spoolease.io/de/docs/full-guide/storage-system" hreflang="de"><link data-rh="true" rel="alternate" href="https://docs.spoolease.io/docs/full-guide/storage-system" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Full Guide","item":"https://docs.spoolease.io/de/docs/full-guide/"},{"@type":"ListItem","position":2,"name":"Storage System","item":"https://docs.spoolease.io/de/docs/full-guide/storage-system"}]}</script><link rel="alternate" type="application/rss+xml" href="/de/blog/rss.xml" title="SpoolEase RSS Feed">
 <link rel="alternate" type="application/atom+xml" href="/de/blog/atom.xml" title="SpoolEase Atom Feed"><link rel="stylesheet" href="/de/assets/css/styles.99ffc071.css">
-<script src="/de/assets/js/runtime~main.95df7527.js" defer="defer"></script>
+<script src="/de/assets/js/runtime~main.16eda676.js" defer="defer"></script>
 <script src="/de/assets/js/main.d7404a4f.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -84,10 +84,23 @@
 <li>Define storage configuration (racks and their structure) - in the Inventory application.</li>
 <li>Set or clear assigned and actual locations per spool using either managed locations or free text - in the inventory application.</li>
 <li>When a spool is loaded into AMS, its actual location is automatically cleared, and the inventory will display its location in the printer.</li>
-<li>Manually mark a spool as removed from storage by scanning it to staging and selecting <strong>Picked from Storage</strong>.</li>
-<li>When a spool is in staging and has an assigned location, select <strong>Placed in Assigned Spot</strong> to copy the assigned location into the actual location.</li>
+<li>Manually mark a spool as removed from storage by scanning it to staging and selecting <strong>Pick from Storage</strong>.</li>
+<li>When a spool is in staging and has an assigned location, select <strong>Place in Assigned Spot</strong> to copy the assigned location into the actual location.</li>
 </ul>
 <p>This covers basic needs, but assigning arbitrary locations manually through the inventory application is not always convenient. This is where location tags come in.</p>
+<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>info</div><div class="admonitionContent_BuS1"><ul>
+<li>After selecting Pick from Storage or Place in Assigned Spot, the Console displays the spool’s Actual Location or Assigned Location, making it easy to know where to go to fetch or return the spool.</li>
+<li>SpoolEase Console includes a feature that simplifies picking spools from storage when staging is empty. Tapping the staging area allows you to enter a spool ID and load that spool into staging.
+To pick a spool from storage:<!-- -->
+<ol>
+<li>Find the required spool in the inventory and note its ID.</li>
+<li>Ensure staging is empty, then tap the staging area on the Console and enter the spool ID to load it.</li>
+<li>Tap staging, select <strong>More…</strong>, then choose <strong>Pick from Storage</strong>.
+The spool’s actual location is displayed so you can retrieve it.
+After picking the spool, press <strong>Spool Picked</strong> to clear its actual location in the inventory.</li>
+</ol>
+</li>
+</ul></div></div>
 <hr>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="location-tags">Location Tags<a href="#location-tags" class="hash-link" aria-label="Direkter Link zur Location Tags" title="Direkter Link zur Location Tags">​</a></h2>
 <p>Location tags add an additional interaction layer on top of the location system.</p>
