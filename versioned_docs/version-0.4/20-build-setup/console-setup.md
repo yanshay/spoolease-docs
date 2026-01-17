@@ -13,7 +13,7 @@ After building SpoolEase Console, you’ll need to set it up for your 3D printer
 
 - **WiFi credentials** (network name/SSID and password) for a network that has access to the 3D printer.
 - **Printer Serial Number** ([Find it in the Bambu Wiki](https://wiki.bambulab.com/en/general/find-sn)).
-- **Printer Access Code** ([Find it in the Bambu Wiki](https://wiki.bambulab.com/en/knowledge-sharing/enable-lan-mode)) - no need to switch to LAN mode, just see where Access Code is shown on the printer.
+- **Printer Access Code** ([Find it in the Bambu Wiki](https://wiki.bambulab.com/en/knowledge-sharing/enable-lan-mode)).
 
 ### Setup Steps
 

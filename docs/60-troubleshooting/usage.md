@@ -30,3 +30,8 @@ If find the user interface to be slow and respond slow, delayed response of Spoo
 #### Every few hours SpoolEase hangs/stop functioning
 
 Try a better power supply 
+
+#### SpoolEase doesn't track filament consumption
+- First, to verify if consumption is tracked check the "**Slot** Information "Consumed Since Loaded" field. For filament consumption to be reflected in the Spool itself certain informaion needs to be  filled in for the spool. See [Spool Weight Tracking](../full-guide/spool-weight-tracking for more information)
+- Verify your printer has SDCard/USB-Stick installed - this is required when printer is in Dev Mode or set to always fetch print files using ftp.
+- Verify your printer is configured to "Store  Sent Files on External Memory" (available in "Print Options" in the printer display).
