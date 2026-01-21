@@ -37,12 +37,52 @@ The limitation of relying exclusively on this method is that it cannot account f
 
 The advantage of this approach is the ability to monitor remaining filament in real-time as the printer consumes it, with visibility both in the inventory system and through spool information displayed when selecting a slot in the console.
 
+### Net Weight Calculation
+
+The most useful weight value is the **Net Weight**.
+
+To calculate it, a measured **Gross Weight**, taken using SpoolEase Scale, must be available. In addition, one of the following is required:
+
+- **Empty Weight**  
+or  
+- **Label Weight** and **Full Weight** (weight when new)
+
+The Empty Weight can be entered manually. Also, when linking a new full spool (stating it is new unused), it is calculated and filled automatically if missing, but it can also be edited o r cleared later.
+
+Depending on the available data, Net Weight is calculated as:
+
+- `Net Weight = Gross Weight - Empty Weight - Filament Consumed Since Last Weight (tracked from prints)`
+- `Net Weight = Gross Weight - (Full Weight - Label Weight) - Filament Consumed Since Last Weight (tracked from prints)`
+
+The second formula simply estimates the empty spool weight using the Full and Label weights in case the Empty weight is missing.
+
+:::note
+In theory, Net Weight could be estimated without Gross Weight by subtracting consumed filament from the Label Weight.  
+In practice, this can be highly inaccurate due to factors such as filament loss outside prints, missing print tracking, or incorrect filament density.  
+For this reason, SpoolEase intentionally does not perform this calculation, though the reported data allows you to do it manually if desired.
+:::
+
+### Weight Display in SpoolEase Console
+
+SpoolEase Console displays weight information in several places:
+
+1. **Main slots view**  
+   - If Net Weight can be calculated, it is shown directly on the slot. This is normally a positive value, though invalid data may result in a negative value.  
+   - If Net Weight cannot be calculated, a negative (or zero) value is shown, representing filament consumed in printing since the spool was loaded into the AMS or used as an external spool.
+
+2. **Slot details** (when pressing a slot)  
+   - **Slot Information page**: **Consumed since Loaded** shows the filament used since loading the spool into the AMS or as an external spool.  
+   - **Spool Information page**: Displays all spool-related values, including Label, Empty, Full, Net, and Gross weights (including missing values).
+
 :::note
 When a spool is considered new and unused, the Net weight field in the inventory displays the label weight as the net weight (in parentheses).  
 Once a spool is linked to a tag, it is considered in use. From that point on, the system no longer assumes the spool is unused and rely on the actual weight measured by the scale to calculate the net weight. This means that if a spool is tagged but its weight is not measured for any reason, the net weight field will appear empty.  
 This is especially relevant when importing a ambu Lab spool while it is still packaged and going through the link step. In this case, even though the spool is still in its closed package, no net weight will be shown.  
 If you want to import a Bambu Lab spool while it is still packaged, without weighing it, and still see the net weight as the label weight, skip the link step on import and link the tag only when you actually start using the spool. With Bambu Lab spools this is a good idea any way since there are two tags and you need to know which tag you linked to which is difficult when it's still in the package.
 :::
+
+
+
 
 ## Spool Weight Glossary
 
@@ -62,7 +102,8 @@ The current combined weight of the spool and filament, as measured on the scale.
 The amount of filament that has been used from the spool so far, either through printing or removed/broken/cut in any way.
 
 **Net Weight**  
-The weight of the filament alone, excluding the spool. Calculated as Gross Weight minus Empty Weight.
+The weight of the filament alone, excluding the spool.  
+Calculated as Gross Weight minus Empty Weight, or Gross Weight minus 
 
 **Printed Since Added**  
 The amount of filament used for printing since the spool was first added to the inventory, tracked via printer activity.
