@@ -2,7 +2,7 @@
 sidebar_position: 2
 id: support-spoolease
 title: Support SpoolEase
-sidebar_label: Support SpoolEase
+sidebar_label: Support the Project
 ---
 # 💛 Want to Support SpoolEase?
 
