@@ -226,16 +226,18 @@ When a location tag is scanned with a mobile phone, a web application comes up.
 - The scanned tag is displayed.  
 - The associated location is shown as **Selected Location**. You can edit it using the pencil icon. This changes the location for current operations only and does not modify the tag itself.  
 
-Below the location, two tabs are available:
+Below the location, three tabs are available:
 
-- **Spools @ Location** tab – Displays spools linked to this location. The list is divided into:
+- **Location Spools** tab – Displays spools linked to this location. The list is divided into:
   - Spools currently at the location  
   - Spools assigned to the location but not physically there  
   - As operations are performed, a third list may appear of spools removed from both lists due to performing those operations.
 
    Pressing a spool shows the operations available based on its actual location.
 
-- **Spool @ Staging** tab – Displays the spool currently in staging, including its location information (not to be confused with the Selected Location at the top of the page) and available operations.  
+- **Staging Spool** tab – Displays the spool currently in staging, including its location information (not to be confused with the Selected Location at the top of the page) and available operations.  
+
+- **Spool ID** - Similar to **Staging Spool** but spool is selected by entering it's ID.
 
 ### Available Operations
 
