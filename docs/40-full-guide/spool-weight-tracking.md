@@ -58,7 +58,7 @@ The second formula simply estimates the empty spool weight using the Full and La
 
 :::note
 In theory, Net Weight could be estimated without Gross Weight by subtracting consumed filament from the Label Weight.  
-In practice, this can be highly inaccurate due to factors such as filament loss outside prints, missing print tracking, or incorrect filament density.  
+In practice, this can be highly inaccurate due to factors such as print files that can't be retrieved, filament loss outside prints, missing print tracking, or incorrect filament density.  
 For this reason, SpoolEase intentionally does not perform this calculation, though the reported data allows you to do it manually if desired.
 :::
 
