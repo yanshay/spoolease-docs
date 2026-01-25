@@ -37,6 +37,13 @@ The limitation of relying exclusively on this method is that it cannot account f
 
 The advantage of this approach is the ability to monitor remaining filament in real-time as the printer consumes it, with visibility both in the inventory system and through spool information displayed when selecting a slot in the console.
 
+:::info
+SpoolEase cannot track filament consumption when the print file is loaded from the printer’s internal memory. This includes:
+  1. Printing preloaded models that come with the printer
+  2. Using the **Print Again** button on the printer display after a print completes
+  3. Reprinting a previously printed model from the printer’s internal memory
+:::
+
 ### Net Weight Calculation
 
 The most useful weight value is the **Net Weight**.
