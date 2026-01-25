@@ -1,3 +1,5 @@
+import storageSystemRack from '../img/storage-system-rack.jpeg';
+
 # Storage System
 
 :::info
@@ -47,6 +49,15 @@ Each rack can have a different structure.
 - Example: If Bay, Shelf, and Position are not included, then the number of Containers defines how many containers exist directly in the rack.
 
 This flexibility allows many possible structures, but you should define a structure that matches how you actually think about and use your storage.
+
+### Example
+Below is an example showing shelves 3 and 4 in a rack named **“Main”**.  
+This rack is configured with no bays, 5 shelves, 4 positions per shelf, and up to two containers per position.  
+Each container is labeled with its exact location. Inside each label is an NFC tag that represents that location. More details about how NFC is used are provided later in this document.  
+
+Note that **this is only an example**. Many other configurations and approaches for configuring racks and for using NFC tags and labels are possible.
+
+<img src={storageSystemRack} alt="Terminal Screen" class="img-shadow" />
 
 
 ### Current Limitations
@@ -150,20 +161,20 @@ More capabilities will be added in the future.
 
 ## Location Tag Technical Details
 
-To use an NFC tag as a location tag, it must be encoded. This needs to take place only once per tag.
+To use an NFC tag as a location tag, it must be encoded. This needs to take place only once per tag and at this time can only be done properly from the Console and not from the Scale.
 
-- The tag is **not** tied to a specific location.
+- The tag encoding is **not** tied to a specific location.
 - After encoding, you can set and later change the location it represents without re-encoding.
 
 ### Encoding a Location Tag
 
-(Current flow may change)
+(Current flow will change in the future)
 
-1. Swipe left on the main screen.
+1. Swipe right on the main screen to expose the screen on the left.
 2. Select **Encode Location Tag**.
 3. Place the NFC tag near the reader.
 
-After a confirmation is displayed, the tag is now a location tag.
+After a confirmation about successful encoding is displayed, the tag is now a location tag.
 
 ---
 
@@ -177,8 +188,8 @@ When scanning a location tag for the first time, you will be prompted to configu
 - Optional - the console security key
 
 The same configuration screen is available at:
-
-https://tag.spoolease.io/config
+- The settings icon at the top right of the inventory  
+- Directly at https://tag.spoolease.io/config
 
 The configuration is stored locally on the device and must be repeated for each mobile device and browser. If the site data is cleared these settings will be cleared as well.
 
