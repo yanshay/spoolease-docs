@@ -12,3 +12,6 @@ title: Console Components
 - 3D Model of SpoolEase case - [https://makerworld.com/en/models/1138678](https://makerworld.com/en/models/1138678)
 - Four M2x10 screws to securely hold the display in place (not mandatory)
 - Soldering tools
+
+#### Optional but Recommended
+- For attaching tags to spools with ID and Material: 3D Model of SpoolEase Spool NFC Tag Hoder with replaceable material and ID - [https://makerworld.com/en/models/2050083](https://makerworld.com/en/models/2050083)

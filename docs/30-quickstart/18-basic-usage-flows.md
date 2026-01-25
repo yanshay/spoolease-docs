@@ -2,6 +2,7 @@
 sidebar_position: 18
 title: Basic Usage Flows
 ---
+import spooleaseLabelModel from '../img/spoolease-label-model.jpeg';
 
 ### Basic Flow to Add and Use a Spool With the System
 1. [Register the spool](register-new-spools) in the inventory application.  
@@ -11,7 +12,13 @@ title: Basic Usage Flows
 
    When the spool is eventually to be used—possibly weeks or months later—open the package.  
 
-2. Attach an **NFC tag** to the spool and scan it in **SpoolEase** to [link the tag](link-tag-to-spool) with the spool’s inventory record.
+2. Attach an **NFC tag** to the spool and scan it in **SpoolEase** to [link the tag](link-tag-to-spool) with the spool’s inventory record.  
+  :::tip
+    It is highly recommended to have the **Inventory Spool ID** marked in some way on the spool. Don't rely solely on the NFC tag. SpoolEase is designed with that assumption in mind.
+    Any technique will do, but if you want a good solution for that, check out [https://makerworld.com/en/models/2050083](https://makerworld.com/en/models/2050083)
+
+    <img src={spooleaseLabelModel} alt="SpoolEase NFC Tag Holder" class="img-shadow" />
+  :::
 
   :::tip
    The following step is especially important to do at this stage if the spool is still new and unused to record the weight before use.
