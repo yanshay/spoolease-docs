@@ -6,6 +6,8 @@ sidebar_label: Release Notes
 ---
 # Release Notes
 
+## 0.5.0
+
 ### 0.5.3 — Dec 11, 2025
 - Baseline release noted in the release notes
 
@@ -24,3 +26,20 @@ sidebar_label: Release Notes
 ### 0.5.5-b.10 — Jan 22, 2025
 - Fix: Unloading an external spool now correctly removes the tag ID from the slot
 
+
+## 0.6.0
+
+### 0.6.0-b.12
+- Major feature: Storage System for spools location, see [Storage System](full-guide/storage-system)
+- Reflect on tagged/untagged spool clearer
+- Improved sorting of Net weight
+- Added configuration tabs for easier access to several configurations
+- Improved cards view
+
+### 0.6.0-b.13 - Jan 31, 2025
+
+- A few more improvements to card view
+- Add filtering by spool ID
+- Filters section can be collapsed to save screen real estate
+- Medium Feature: Stock - records with several spools, with option to split out spool records to use, see [Stocks of Spools](full-guide/stocks)
+- Display total Net weight and Total spool count (of filtered spools) in the header

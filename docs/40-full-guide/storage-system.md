@@ -1,10 +1,10 @@
 import storageSystemRack from '../img/storage-system-rack.jpeg';
 
-# Storage System
+# Storage System (0.6)
 
 :::info
 
-This documentation is of a pre-release feature and will be available only in version 0.6
+This feature is available starting version 0.6
 
 :::
 
