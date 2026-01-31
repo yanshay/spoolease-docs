@@ -26,6 +26,8 @@ sidebar_label: Release Notes
 ### 0.5.5-b.10 — Jan 22, 2025
 - Fix: Unloading an external spool now correctly removes the tag ID from the slot
 
+### 0.5.5 - Jan 31, 2025
+- Same content of 0.5.5-b.10
 
 ## 0.6.0
 
