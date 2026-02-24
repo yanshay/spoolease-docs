@@ -127,6 +127,15 @@ After picking the spool, press **Spool Picked** to clear its actual location in 
 
 Location tags add an additional interaction layer on top of the location system.
 
+:::warning
+Don’t mix up location tags and spool tags - they’re different and used differently.
+
+- Location tags must be encoded before use (see below) and are attached to a location like a container, shelf, or rack.
+- Spool tags are linked to a spool record and don’t require encoding before use.
+
+A tag can be either a location tag or a spool tag, but not both at the same time.
+:::
+
 After configuring your storage system, you can create **NFC location tags** and attach them to your storage.
 
 A location tag can represent:

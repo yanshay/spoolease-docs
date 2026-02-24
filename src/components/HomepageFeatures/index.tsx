@@ -29,8 +29,8 @@ const FeatureList: FeatureItem[] = [
 
     description: (
       <>
-        Smart inventory management for your 3D filament spools — track type,
-        color, weight, and weight. Stay organized and avoid waste.
+        Smart inventory management and storage management for your 3D filament spools — track type,
+        color, weight and location. Stay organized and streamline your filament management.
       </>
     ),
   },
