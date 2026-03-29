@@ -1,6 +1,6 @@
 import storageSystemRack from '../img/storage-system-rack.jpeg';
 
-# Storage System (0.6)
+# Storage System
 
 :::info
 

@@ -4,7 +4,7 @@ id: welcome
 title: Welcome
 sidebar_label: Welcome
 ---
-# Welcome to SpoolEase 0.5
+# Welcome to SpoolEase
 
 We’re excited to have you join the growing community of happy SpoolEase users!  
 
@@ -16,7 +16,7 @@ It features:
 - NFC tags for automatic spool identification
 - Complete **spool inventory management system** - keeping your spools organized
 - **Precise filament weight tracking** using (1) weight scale, (2) print usage monitoring, and (3) a smart workflow - so you can tell how much filament is available in every spool
-- **Storage System Management** - quickly find where your spools are using NFC based location tracking and seamless workflow to keep location information up to date (version 0.6)
+- **Storage System Management** - quickly find where your spools are using NFC based location tracking and seamless workflow to keep location information up to date
 - **Automatic slot configuration** for material, color, pressure advance (K)
 - **Virtual Spool Label** for viewing spool info on your mobile device
 - Import and support for Bambu Lab Spools RFID tag

@@ -6,7 +6,28 @@ sidebar_label: Release Notes
 ---
 # Release Notes
 
-### 0.6.1-b.2
+### 0.6.2-b...
+
+- **Multiple Tags per Spool**  
+  Link multiple tags to a spool using **Add Another Tag** operation  
+  Unlink a specific linked tag or all linked tags from a spool  
+  Especially useful for Bambu Lab spools to link both tags to the same spool record  
+  Need to upgrade also scale for encoding support using scale  
+-  **Multiple Colors Spools and Full Transparency Support**  
+  Full support for multi-color spools  
+  Full support for transparent/translucent colors  
+  Add eyedropper support from images (mobile photos/local or web) to set colors  
+  Improve convenience of color picker for multi color spools  
+- **Fixes**  
+  Fix small desktop screens (height) to work well  
+  Fix table layout on wide screens in some circumstances  
+
+### 0.6.1
+
+- **Inventory UI improvements**  
+  Card title includes weight available / label weight  
+  Mobile card view - cards are now collapsible and collapsed by default - collapse/expand by tapping card's top section  
+
 - **Improved PN532 initialization**  
   Enhanced startup reliability, primarily impacting the scale.
 
