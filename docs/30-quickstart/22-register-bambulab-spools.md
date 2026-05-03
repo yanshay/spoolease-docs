@@ -9,4 +9,5 @@ Until documentation is detailed, just scan a Bambu Lab Tag and follow the instru
 
 Note that Bambu Lab spools have two NFC tags, which SpoolEase currently treats as separate spools. Use only one tag and always scan the same one.
 
-Choose a consistent scanning orientation (e.g. the AMS loading orientation) and use it for all Bambu Lab spools.
+- Choose a consistent scanning orientation (e.g. the AMS loading orientation) and use it for all Bambu Lab spools.  
+- Or an alternative approach, only import the data from the Bambu Lab tag, and then link the resulting spool record to a standard tag and attach it to the Bambu Lab spool in a clearly visible position.

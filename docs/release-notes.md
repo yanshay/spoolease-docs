@@ -8,19 +8,46 @@ sidebar_label: Release Notes
 
 ### 0.6.2-b...
 
+- **Enhancements**  
+  Bambu Lab tag that's registered with SpoolEase, when scanned by AMS configures slot and assigns spool-id to slot - saves the need to scan Bambu Lab spools  
+  If slot is with spool-id and spool is loaded (w/o staging) then set slot by spool-id - allows to configure slot before loading spool  
+  
+- **Fixes**  
+  Import of Bambu Lab spools now asks if spool is full or used, which solves all kinds of issues  
+  Solved wrong count of number of spools in summary line  
+  Added support for columns ordering drag/drop on mobile  
+  When adding spools from inventory app, added date/time is set even when Console failed to get NTP using client date/time  
+  
+- **Breaking Change**
+  inventory now in http://device/app/inventory (redirects there from http://device/inventory)  
+
+- **Printers View**  
+  First stab at printers display - planned to include the key features missing by lack of handy app when printer is in developer mode  
+  Display printer and print status + Pause/Resume/Stop  
+  Display printer errors  
+  Available directly using url http://device/app/printers  
+
+- **WPA**  
+  Can now be added to Home Screen and used as a standalone app (PWA)  
+
+- **UI/UX changes**  
+  Overhaul the Inventory UI look and feel - likely to introduce glitches here and there, please report  
+  Many Inventory UI improvements and fixes on desktop and mobile  
+  Allow fixing number of rows in table across sessions  
+  Storing column (using **Columns** button) configuration also stores the sorting as the default
+  Probably more ...
+
 - **Multiple Tags per Spool**  
   Link multiple tags to a spool using **Add Another Tag** operation  
   Unlink a specific linked tag or all linked tags from a spool  
   Especially useful for Bambu Lab spools to link both tags to the same spool record  
   Need to upgrade also scale for encoding support using scale  
+
 -  **Multiple Colors Spools and Full Transparency Support**  
   Full support for multi-color spools  
   Full support for transparent/translucent colors  
   Add eyedropper support from images (mobile photos/local or web) to set colors  
   Improve convenience of color picker for multi color spools  
-- **Fixes**  
-  Fix small desktop screens (height) to work well  
-  Fix table layout on wide screens in some circumstances  
 
 ### 0.6.1
 

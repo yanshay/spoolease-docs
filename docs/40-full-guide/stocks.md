@@ -1,4 +1,4 @@
-# Stocks of Spools (0.6)
+# Stocks of Spools
 
 :::info
 
