@@ -92,7 +92,16 @@ Examples:
 - `"Polymaker PLA"`
   Finds that exact text together.
 
-`*` does not work as a wildcard inside quotes.
+You can use `*` inside quotes to match part of one word while still keeping the words next to each other.
+
+Example:
+
+- `"Bambu Lab*"`
+  Can match `Bambu Lab`, `Bambu Lab Basic`, or `Bambu Laboratories`.
+
+Inside quotes, `*` still works inside one word. It does not jump across separate words.
+
+If you need a literal `*`, write `\*`. You can also write `\"` for a quote, `\\` for a backslash, and `\n`, `\r`, or `\t` for line breaks and tabs.
 
 An exact phrase is not the same as an exact field match. It only means the words must appear together. To require the whole field to be exactly a value, see [Match a Field Exactly](#match-a-field-exactly).
 
@@ -126,6 +135,8 @@ Examples:
   Matches words that end with `maker`.
 - `*red*`
   Matches words that contain `red`.
+- `"Bambu Lab*"`
+  Matches a phrase where the second word starts with `Lab`.
 
 `*` works inside one word. It does not jump across separate words.
 
@@ -182,10 +193,23 @@ Examples:
   Finds spools whose brand is exactly `Bambu Lab`.
 - `brand:!="Bambu Lab"`
   Finds spools whose brand is not exactly `Bambu Lab`.
+- `brand:="Bob \"Special\" Filament"`
+  Finds spools whose brand is exactly `Bob "Special" Filament`.
 
 Use quotes when the exact value contains spaces, is empty, or looks like a number.
 
+You can also check for one of several exact values.
+
+Examples:
+
+- `brand:=("Bambu Lab", Polymaker)`
+  Finds spools whose brand is exactly `Bambu Lab` or exactly `Polymaker`.
+- `brand:!=("Bambu Lab", Polymaker)`
+  Finds spools whose brand is not exactly `Bambu Lab` and not exactly `Polymaker`.
+
 Exact text matches are not case-sensitive, and repeated spaces count as one space.
+
+Wildcards are not active in exact text matches. `brand:="Bambu Lab*"` checks for a literal `*` in the brand.
 
 Example:
 
@@ -360,6 +384,8 @@ Examples:
   Finds a spool that has tag `ABCD`.
 - `tags:=ABCD`
   Finds a tag value that is exactly `ABCD`.
+- `tags:=(ABCD, EF12)`
+  Finds a tag value that is exactly `ABCD` or exactly `EF12`.
 - `tags:*BC*`
   Finds a tag value that contains `BC`.
 - `tags:=""`
@@ -485,8 +511,10 @@ Here are a few common things that do not work:
   Empty quoted phrases do not work by themselves. To check an empty field, name the field, such as `note:=""`.
 - `brand:""`
   Empty quoted phrases do not work inside a field either. Use `brand:=""` to check for an empty brand.
-- `"*red*"`
-  `*` is not a wildcard inside quotes.
+- `brand:=()`
+  Exact-value lists cannot be empty. Use values inside the parentheses, such as `brand:=(Bambu, Polymaker)`.
+- `"bad\q"`
+  Unknown quoted-string escapes do not work. Use only `\"`, `\\`, `\*`, `\n`, `\r`, or `\t`.
 - `brand:(material:PLA)`
   You cannot put one field search inside another field search.
 
