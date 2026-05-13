@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="de" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-full-guide/expression-language" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.8.1">
+<title data-rh="true">Expression Language | SpoolEase</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://docs.spoolease.io/de/docs/full-guide/expression-language"><meta data-rh="true" property="og:locale" content="de"><meta data-rh="true" property="og:locale:alternate" content="en"><meta data-rh="true" name="docusaurus_locale" content="de"><meta data-rh="true" name="docsearch:language" content="de"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Expression Language | SpoolEase"><meta data-rh="true" name="description" content="You can use the expression language to filter spools in a flexible way."><meta data-rh="true" property="og:description" content="You can use the expression language to filter spools in a flexible way."><link data-rh="true" rel="icon" href="/de/img/spoolease-logo.png"><link data-rh="true" rel="canonical" href="https://docs.spoolease.io/de/docs/full-guide/expression-language"><link data-rh="true" rel="alternate" href="https://docs.spoolease.io/docs/full-guide/expression-language" hreflang="en"><link data-rh="true" rel="alternate" href="https://docs.spoolease.io/de/docs/full-guide/expression-language" hreflang="de"><link data-rh="true" rel="alternate" href="https://docs.spoolease.io/docs/full-guide/expression-language" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Full Guide","item":"https://docs.spoolease.io/de/docs/full-guide/"},{"@type":"ListItem","position":2,"name":"Expression Language","item":"https://docs.spoolease.io/de/docs/full-guide/expression-language"}]}</script><link rel="alternate" type="application/rss+xml" href="/de/blog/rss.xml" title="SpoolEase RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/de/blog/atom.xml" title="SpoolEase Atom Feed"><link rel="stylesheet" href="/de/assets/css/styles.511ce44d.css">
+<script src="/de/assets/js/runtime~main.9d354a9d.js" defer="defer"></script>
+<script src="/de/assets/js/main.eee8c050.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t="light";var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",e||t),document.documentElement.setAttribute("data-theme-choice",e||t)}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/de/img/spoolease-logo.png"><div role="region" aria-label="Zum Hauptinhalt springen"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Zum Hauptinhalt springen</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/de/"><div class="navbar__logo"><img src="/de/img/spoolease-logo.png" alt="SpoolEase Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/de/img/spoolease-logo.png" alt="SpoolEase Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">SpoolEase</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/de/docs/welcome">Documentation</a><a href="https://www.spoolease.io/index.html" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">Flash Product Page</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://github.com/yanshay/spoolease" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href="#" aria-haspopup="true" aria-expanded="false" role="button" class="navbar__link"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" class="iconLanguage_nlXk"><path fill="currentColor" d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"></path></svg>Deutsch</a><ul class="dropdown__menu"><li><a href="/docs/full-guide/expression-language" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="en">English</a></li><li><a href="/de/docs/full-guide/expression-language" target="_self" rel="noopener noreferrer" class="dropdown__link dropdown__link--active" lang="de">Deutsch</a></li></ul></div><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Umschalten zwischen dunkler und heller Ansicht (momentan system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"><div class="navbar__search searchBarContainer_NW3z" dir="ltr"><input placeholder="Suche" aria-label="Search" class="navbar__search-input searchInput_YFbd" value=""><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Zurück nach oben scrollen" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/de/docs/welcome">Willkommen</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/de/docs/release-notes">Release Notes</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/de/docs/support-spoolease">Support the Project</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/de/docs/Technicalities/upgrading">Technicalities</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/de/docs/components">Required Components</a><button aria-label="Expand sidebar category &#x27;Required Components&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/de/docs/build-setup">Build &amp; Setup</a><button aria-label="Expand sidebar category &#x27;Build &amp; Setup&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/de/docs/quickstart">Quick Start</a><button aria-label="Expand sidebar category &#x27;Quick Start&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--active" href="/de/docs/full-guide">Full Guide</a><button aria-label="Collapse sidebar category &#x27;Full Guide&#x27;" aria-expanded="true" type="button" class="clean-btn menu__caret"></button></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/de/docs/full-guide/console-ui">Console User Interface</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/de/docs/full-guide/backup-restore">Backup and Restore</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/de/docs/full-guide/console-web-config">Console Web Config</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/de/docs/full-guide/custom-filaments">Custom Filaments</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/de/docs/full-guide/dashboard">Dashboard</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/de/docs/full-guide/expression-language">Expression Language</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/de/docs/full-guide/multiple-printers">Multiple Printers</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/de/docs/full-guide/printers-monitoring">Printers Monitoring</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/de/docs/full-guide/scale-config">Scale Config</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/de/docs/full-guide/software-updates">Software Updates</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/de/docs/full-guide/spool-weight-tracking">Spool Weight Tracking</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/de/docs/full-guide/stocks">Stocks of Spools</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/de/docs/full-guide/storage-system">Storage System</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/de/docs/full-guide/tips">Usage Tips</a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/de/docs/concepts">Concepts</a><button aria-label="Expand sidebar category &#x27;Concepts&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/de/docs/troubleshooting">Troubleshooting</a><button aria-label="Expand sidebar category &#x27;Troubleshooting&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/de/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><a class="breadcrumbs__link" href="/de/docs/full-guide"><span>Full Guide</span></a></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Expression Language</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">Auf dieser Seite</button></div><div class="theme-doc-markdown markdown"><header><h1>Expression Language</h1></header><p>You can use the expression language to filter spools in a flexible way.</p>
+<p>You do not need to learn all of it at once. Start with simple searches like <code>PLA Red</code>, then add more only when you need them.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="what-a-search-looks-at-by-default">What a Search Looks At by Default<a href="#what-a-search-looks-at-by-default" class="hash-link" aria-label="Direkter Link zur What a Search Looks At by Default" title="Direkter Link zur What a Search Looks At by Default">​</a></h2>
+<p>If you do not name a field, the search checks:</p>
+<ul>
+<li>the spool&#x27;s main text</li>
+<li>the spool ID</li>
+<li>top-level weight checks such as <code>&gt;250g</code>, which check net weight</li>
+</ul>
+<p>The main text is built from the brand, material, subtype, and color name.</p>
+<p>Examples:</p>
+<ul>
+<li><code>PLA</code>
+Finds spools whose main text contains <code>PLA</code>.</li>
+<li><code>10</code>
+Can find a spool whose ID is <code>10</code>.</li>
+<li><code>&gt;250g</code>
+Finds spools whose net weight is above 250 grams.</li>
+</ul>
+<p>You can also search one specific field, including fields that are not part of the main text. See <a href="#search-in-one-specific-field">Search in One Specific Field</a> and <a href="#field-names-aliases-and-built-in-shortcuts">Field Names, Aliases, and Built-In Shortcuts</a>.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="quick-examples">Quick Examples<a href="#quick-examples" class="hash-link" aria-label="Direkter Link zur Quick Examples" title="Direkter Link zur Quick Examples">​</a></h2>
+<table><thead><tr><th>Expression</th><th>What it means</th></tr></thead><tbody><tr><td><code>RED PLA</code></td><td>Find spools that match both <code>RED</code> and <code>PLA</code>.</td></tr><tr><td><code>PLA (Red, Green)</code></td><td>Find PLA spools that are either red or green.</td></tr><tr><td><code>Red PLA, Gray PETG</code></td><td>Find red PLA spools, or gray PETG spools.</td></tr><tr><td><code>ASA &gt;250g</code></td><td>Find ASA spools with more than 250 grams of net weight.</td></tr></tbody></table>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="use-a-space-to-mean-and">Use a Space to Mean &quot;and&quot;<a href="#use-a-space-to-mean-and" class="hash-link" aria-label="Direkter Link zur Use a Space to Mean &quot;and&quot;" title="Direkter Link zur Use a Space to Mean &quot;and&quot;">​</a></h2>
+<p>To make the simple filter cases simple and appear like regular text as you would expect, a space means both parts must match.</p>
+<p>Examples:</p>
+<ul>
+<li><code>PLA Red</code>
+Finds spools that match both <code>PLA</code> and <code>Red</code>.</li>
+<li><code>Polymaker PLA</code>
+Finds spools that match both <code>Polymaker</code> and <code>PLA</code>.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="use-a-comma-to-mean-or">Use a Comma to Mean &quot;or&quot;<a href="#use-a-comma-to-mean-or" class="hash-link" aria-label="Direkter Link zur Use a Comma to Mean &quot;or&quot;" title="Direkter Link zur Use a Comma to Mean &quot;or&quot;">​</a></h2>
+<p>A comma means either side can match.</p>
+<p>Examples:</p>
+<ul>
+<li><code>PLA, PETG</code>
+Finds spools that are PLA or PETG.</li>
+<li><code>Red PLA, Gray PETG</code>
+Finds red PLA spools, or gray PETG spools.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="use--to-mean-not">Use <code>!</code> to Mean &quot;not&quot;<a href="#use--to-mean-not" class="hash-link" aria-label="Direkter Link zur use--to-mean-not" title="Direkter Link zur use--to-mean-not">​</a></h2>
+<p>Use <code>!</code> to exclude something.</p>
+<p>Examples:</p>
+<ul>
+<li><code>PLA !Red</code>
+Finds PLA spools that are not red.</li>
+<li><code>!(PLA, PETG)</code>
+Finds spools that are neither PLA nor PETG.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="search-by-word">Search by Word<a href="#search-by-word" class="hash-link" aria-label="Direkter Link zur Search by Word" title="Direkter Link zur Search by Word">​</a></h2>
+<p>A plain search like <code>PLA</code> or <code>Red</code> matches a whole word.</p>
+<p>Examples:</p>
+<ul>
+<li><code>Truck</code>
+Does not match <code>Truck-Red</code>.</li>
+<li><code>Truck-Red</code>
+Does match <code>Truck-Red</code>.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="search-for-an-exact-phrase">Search for an Exact Phrase<a href="#search-for-an-exact-phrase" class="hash-link" aria-label="Direkter Link zur Search for an Exact Phrase" title="Direkter Link zur Search for an Exact Phrase">​</a></h2>
+<p>Use quotes when you want words next to each other in the same order.</p>
+<p>Examples:</p>
+<ul>
+<li><code>&quot;Truck Red&quot;</code>
+Finds the exact phrase <code>Truck Red</code>.</li>
+<li><code>&quot;Polymaker PLA&quot;</code>
+Finds that exact text together.</li>
+</ul>
+<p>You can use <code>*</code> inside quotes to match part of one word while still keeping the words next to each other.</p>
+<p>Example:</p>
+<ul>
+<li><code>&quot;Bambu Lab*&quot;</code>
+Can match <code>Bambu Lab</code>, <code>Bambu Lab Basic</code>, or <code>Bambu Laboratories</code>.</li>
+</ul>
+<p>Inside quotes, <code>*</code> still works inside one word. It does not jump across separate words.</p>
+<p>If you need a literal <code>*</code>, write <code>\*</code>. You can also write <code>\&quot;</code> for a quote, <code>\\</code> for a backslash, and <code>\n</code>, <code>\r</code>, or <code>\t</code> for line breaks and tabs.</p>
+<p>An exact phrase is not the same as an exact field match. It only means the words must appear together. To require the whole field to be exactly a value, see <a href="#match-a-field-exactly">Match a Field Exactly</a>.</p>
+<p>Text matching treats repeated spaces as one space.</p>
+<p>Example:</p>
+<ul>
+<li><code>&quot;Bambu Lab&quot;</code>
+Can match stored text like <code>BAMBU    Lab</code>.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="group-parts-with-parentheses">Group Parts with Parentheses<a href="#group-parts-with-parentheses" class="hash-link" aria-label="Direkter Link zur Group Parts with Parentheses" title="Direkter Link zur Group Parts with Parentheses">​</a></h2>
+<p>Use parentheses to keep part of the search together.</p>
+<p>Examples:</p>
+<ul>
+<li><code>PLA (Red, Green)</code>
+Finds PLA spools that are red or green.</li>
+<li><code>!(Red, Green)</code>
+Finds spools that are neither red nor green.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="use--to-match-part-of-a-word">Use <code>*</code> to Match Part of a Word<a href="#use--to-match-part-of-a-word" class="hash-link" aria-label="Direkter Link zur use--to-match-part-of-a-word" title="Direkter Link zur use--to-match-part-of-a-word">​</a></h2>
+<p>Use <code>*</code> when you want to match part of a word.</p>
+<p>Examples:</p>
+<ul>
+<li><code>PLA*</code>
+Matches words that start with <code>PLA</code>.</li>
+<li><code>*maker</code>
+Matches words that end with <code>maker</code>.</li>
+<li><code>*red*</code>
+Matches words that contain <code>red</code>.</li>
+<li><code>&quot;Bambu Lab*&quot;</code>
+Matches a phrase where the second word starts with <code>Lab</code>.</li>
+</ul>
+<p><code>*</code> works inside one word. It does not jump across separate words.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="uppercase-and-lowercase-do-not-matter">Uppercase and Lowercase Do Not Matter<a href="#uppercase-and-lowercase-do-not-matter" class="hash-link" aria-label="Direkter Link zur Uppercase and Lowercase Do Not Matter" title="Direkter Link zur Uppercase and Lowercase Do Not Matter">​</a></h2>
+<p>Searches are not case-sensitive.</p>
+<p>Examples:</p>
+<ul>
+<li><code>red</code>, <code>RED</code>, and <code>ReD</code>
+All mean the same thing.</li>
+<li><code>COLOR:red</code>
+Works the same as <code>color:red</code>.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="how-words-are-split">How Words Are Split<a href="#how-words-are-split" class="hash-link" aria-label="Direkter Link zur How Words Are Split" title="Direkter Link zur How Words Are Split">​</a></h2>
+<p>Words split at spaces and at these characters:</p>
+<p><code>, / \ ! # @ ( ) ; | . &quot; { } [ ]</code></p>
+<p>Examples:</p>
+<ul>
+<li><code>Red/Black</code>
+Can be found with <code>Red</code> or <code>Black</code>.</li>
+<li><code>Truck-Red</code>
+Stays one word, because <code>-</code> does not split it.</li>
+<li><code>#Main/S:5</code>
+Can be found with <code>Main</code> and <code>S:5</code>.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="search-in-one-specific-field">Search in One Specific Field<a href="#search-in-one-specific-field" class="hash-link" aria-label="Direkter Link zur Search in One Specific Field" title="Direkter Link zur Search in One Specific Field">​</a></h2>
+<p>Use <code>field:search</code> when you want to search only one field.</p>
+<p>Examples:</p>
+<ul>
+<li><code>material:PLA</code>
+Checks only the material field.</li>
+<li><code>note:dry</code>
+Checks only the note field.</li>
+<li><code>description:&quot;Polymaker PLA&quot;</code>
+Checks only the main text field.</li>
+</ul>
+<p>You can use this with fields inside the main text and with other fields such as notes, tags, weights, and locations. See <a href="#field-names-aliases-and-built-in-shortcuts">Field Names, Aliases, and Built-In Shortcuts</a>.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="match-a-field-exactly">Match a Field Exactly<a href="#match-a-field-exactly" class="hash-link" aria-label="Direkter Link zur Match a Field Exactly" title="Direkter Link zur Match a Field Exactly">​</a></h2>
+<p>Use <code>field:=value</code> when the whole field must be exactly that value.</p>
+<p>Examples:</p>
+<ul>
+<li><code>brand:=Polymaker</code>
+Finds spools whose brand is exactly <code>Polymaker</code>.</li>
+<li><code>brand:=&quot;Bambu Lab&quot;</code>
+Finds spools whose brand is exactly <code>Bambu Lab</code>.</li>
+<li><code>brand:!=&quot;Bambu Lab&quot;</code>
+Finds spools whose brand is not exactly <code>Bambu Lab</code>.</li>
+<li><code>brand:=&quot;Bob \&quot;Special\&quot; Filament&quot;</code>
+Finds spools whose brand is exactly <code>Bob &quot;Special&quot; Filament</code>.</li>
+</ul>
+<p>Use quotes when the exact value contains spaces, is empty, or looks like a number.</p>
+<p>You can also check for one of several exact values.</p>
+<p>Examples:</p>
+<ul>
+<li><code>brand:=(&quot;Bambu Lab&quot;, Polymaker)</code>
+Finds spools whose brand is exactly <code>Bambu Lab</code> or exactly <code>Polymaker</code>.</li>
+<li><code>brand:!=(&quot;Bambu Lab&quot;, Polymaker)</code>
+Finds spools whose brand is not exactly <code>Bambu Lab</code> and not exactly <code>Polymaker</code>.</li>
+</ul>
+<p>Exact text matches are not case-sensitive, and repeated spaces count as one space.</p>
+<p>Wildcards are not active in exact text matches. <code>brand:=&quot;Bambu Lab*&quot;</code> checks for a literal <code>*</code> in the brand.</p>
+<p>Example:</p>
+<ul>
+<li><code>brand:=&quot;Bambu Lab&quot;</code>
+Can match a stored brand like <code>BAMBU    Lab</code>.</li>
+</ul>
+<p>You can also use exact matching to check whether a text field is empty.</p>
+<p>Examples:</p>
+<ul>
+<li><code>note:=&quot;&quot;</code>
+Finds spools whose note is empty.</li>
+<li><code>note:!=&quot;&quot;</code>
+Finds spools whose note is not empty.</li>
+</ul>
+<p>A field that is missing or only spaces counts as empty.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="keep-several-checks-in-the-same-field">Keep Several Checks in the Same Field<a href="#keep-several-checks-in-the-same-field" class="hash-link" aria-label="Direkter Link zur Keep Several Checks in the Same Field" title="Direkter Link zur Keep Several Checks in the Same Field">​</a></h2>
+<p>If more than one check should stay inside the same field, use parentheses.</p>
+<p>Examples:</p>
+<ul>
+<li><code>color:(red, green)</code>
+Finds spools whose color is red or green.</li>
+<li><code>id:(15, 22, &gt;100)</code>
+Checks all of those conditions inside the ID field.</li>
+</ul>
+<p>Without parentheses, the field name applies only to the next part.</p>
+<p>Example:</p>
+<ul>
+<li><code>color:black red</code>
+Means color is black, and <code>red</code> can match somewhere else.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="short-names-for-common-fields">Short Names for Common Fields<a href="#short-names-for-common-fields" class="hash-link" aria-label="Direkter Link zur Short Names for Common Fields" title="Direkter Link zur Short Names for Common Fields">​</a></h2>
+<p>Some fields have shorter names.</p>
+<p>Examples:</p>
+<ul>
+<li><code>color:red</code>
+Uses <code>color</code> as a short name for <code>color_name</code>.</li>
+<li><code>net:&gt;250g</code>
+Uses <code>net</code> as a short name for <code>weight_net</code>.</li>
+<li><code>actual:Main</code>
+Uses <code>actual</code> as a short name for <code>location_actual</code>.</li>
+<li><code>assigned:Shelf-2</code>
+Uses <code>assigned</code> as a short name for <code>location_assigned</code>.</li>
+</ul>
+<p>The full list is in <a href="#field-names-aliases-and-built-in-shortcuts">Field Names, Aliases, and Built-In Shortcuts</a>.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="filter-by-numbers">Filter by Numbers<a href="#filter-by-numbers" class="hash-link" aria-label="Direkter Link zur Filter by Numbers" title="Direkter Link zur Filter by Numbers">​</a></h2>
+<p>Some fields can be checked with numbers.</p>
+<p>You can use:</p>
+<ul>
+<li><code>&lt;</code></li>
+<li><code>&lt;=</code></li>
+<li><code>&gt;</code></li>
+<li><code>&gt;=</code></li>
+<li><code>=</code></li>
+<li><code>!=</code></li>
+</ul>
+<p>Examples:</p>
+<ul>
+<li><code>net:&gt;250g</code>
+Finds spools whose net weight is above 250 grams.</li>
+<li><code>spools_count:&gt;=2</code>
+Finds records that contain two or more spools.</li>
+<li><code>used:&lt;20</code>
+Finds spools with less than 20 grams used.</li>
+</ul>
+<p>Numeric fields are listed in <a href="#field-names-aliases-and-built-in-shortcuts">Field Names, Aliases, and Built-In Shortcuts</a>.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="use-g-and-kg">Use <code>g</code> and <code>kg</code><a href="#use-g-and-kg" class="hash-link" aria-label="Direkter Link zur use-g-and-kg" title="Direkter Link zur use-g-and-kg">​</a></h2>
+<p>Weight fields understand <code>g</code> and <code>kg</code>.</p>
+<p>Inside a weight field, the unit is optional. If you leave it out, the number is read as grams.</p>
+<p>Examples:</p>
+<ul>
+<li><code>net:&gt;250</code>
+Checks for more than 250 grams.</li>
+<li><code>label:160</code>
+Checks for exactly 160 grams.</li>
+<li><code>net:&lt;=0.5kg</code>
+Checks for 500 grams or less.</li>
+<li><code>&gt;250g</code>
+Without a field name, this checks net weight, and here the unit is required.</li>
+</ul>
+<p>Keep the unit attached to the number when you write one.</p>
+<p>Example:</p>
+<ul>
+<li><code>&gt;250 g</code>
+Does not work.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="short-form-for-an-exact-number-match">Short Form for an Exact Number Match<a href="#short-form-for-an-exact-number-match" class="hash-link" aria-label="Direkter Link zur Short Form for an Exact Number Match" title="Direkter Link zur Short Form for an Exact Number Match">​</a></h2>
+<p>Inside numeric fields, you can often write just the number.</p>
+<p>Examples:</p>
+<ul>
+<li><code>spools_count:2</code>
+Means exactly 2 spools.</li>
+<li><code>tags_count:3</code>
+Means exactly 3 tags.</li>
+<li><code>gross:200</code>
+Means exactly 200 grams gross weight.</li>
+</ul>
+<p>This is the same as using <code>=</code>.</p>
+<p>Example:</p>
+<ul>
+<li><code>spools_count:2</code>
+Means the same as <code>spools_count:=2</code>.</li>
+</ul>
+<p>For weight fields, <code>gross:200</code> means 200 grams. You can still write <code>gross:200g</code> if you want.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="how-spool-id-searches-work">How Spool ID Searches Work<a href="#how-spool-id-searches-work" class="hash-link" aria-label="Direkter Link zur How Spool ID Searches Work" title="Direkter Link zur How Spool ID Searches Work">​</a></h2>
+<p>The <code>id</code> field behaves a little differently. It can work like text and like a number.</p>
+<p>Examples:</p>
+<ul>
+<li><code>id:ABC-42</code>
+Finds that ID as text.</li>
+<li><code>id:*10*</code>
+Finds IDs that contain <code>10</code>.</li>
+<li><code>id:&gt;100</code>
+Finds numeric IDs above 100.</li>
+<li><code>id:010</code>
+Can match the text <code>010</code>, and can also match numeric ID <code>10</code>.</li>
+<li><code>id:=&quot;010&quot;</code>
+Checks the exact ID text <code>010</code>, so it keeps the leading zero.</li>
+</ul>
+<p>If an ID is not numeric, numeric comparisons like <code>id:&gt;100</code> will not match it.</p>
+<p>Use exact text matching when <code>010</code> and <code>10</code> should be treated as different IDs.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="built-in-shortcuts">Built-In Shortcuts<a href="#built-in-shortcuts" class="hash-link" aria-label="Direkter Link zur Built-In Shortcuts" title="Direkter Link zur Built-In Shortcuts">​</a></h2>
+<p>Some useful checks are already built in. These start with <code>%</code>.</p>
+<p>Examples:</p>
+<ul>
+<li><code>%tagged</code>
+Finds spools that have at least one tag.</li>
+<li><code>!%tagged</code>
+Finds spools with no tags.</li>
+<li><code>%stock</code>
+Finds stock records.</li>
+<li><code>%placed</code>
+Finds spools that have a current location.</li>
+<li><code>%inprinter</code>
+Finds spools that are currently in a printer.</li>
+</ul>
+<p>More shortcuts are listed in <a href="#field-names-aliases-and-built-in-shortcuts">Field Names, Aliases, and Built-In Shortcuts</a>.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="searching-lists-like-tags-and-colors">Searching Lists Like Tags and Colors<a href="#searching-lists-like-tags-and-colors" class="hash-link" aria-label="Direkter Link zur Searching Lists Like Tags and Colors" title="Direkter Link zur Searching Lists Like Tags and Colors">​</a></h2>
+<p>The <code>tags</code> and <code>color_rgba</code> fields are treated as lists.</p>
+<p>Each list item is checked on its own.</p>
+<p>Examples:</p>
+<ul>
+<li><code>tags:ABCD</code>
+Finds a spool that has tag <code>ABCD</code>.</li>
+<li><code>tags:=ABCD</code>
+Finds a tag value that is exactly <code>ABCD</code>.</li>
+<li><code>tags:=(ABCD, EF12)</code>
+Finds a tag value that is exactly <code>ABCD</code> or exactly <code>EF12</code>.</li>
+<li><code>tags:*BC*</code>
+Finds a tag value that contains <code>BC</code>.</li>
+<li><code>tags:=&quot;&quot;</code>
+Finds spools with no tags.</li>
+<li><code>color_rgba:FF0000FF</code>
+Finds a spool that has that RGBA color value.</li>
+</ul>
+<p>One search does not stretch across two separate list items. Exact matching also checks each list item on its own.</p>
+<p>These fields are listed in <a href="#field-names-aliases-and-built-in-shortcuts">Field Names, Aliases, and Built-In Shortcuts</a>.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="counting-spools-tags-and-colors">Counting Spools, Tags, and Colors<a href="#counting-spools-tags-and-colors" class="hash-link" aria-label="Direkter Link zur Counting Spools, Tags, and Colors" title="Direkter Link zur Counting Spools, Tags, and Colors">​</a></h2>
+<p>These fields let you search by count:</p>
+<ul>
+<li><code>spools_count</code></li>
+<li><code>tags_count</code></li>
+<li><code>color_count</code></li>
+</ul>
+<p>Examples:</p>
+<ul>
+<li><code>spools_count:2</code>
+Finds records that contain exactly 2 spools.</li>
+<li><code>tags_count:&gt;=2</code>
+Finds records with 2 or more tags.</li>
+<li><code>color_count:1</code>
+Finds records with exactly 1 saved color value.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="searching-locations">Searching Locations<a href="#searching-locations" class="hash-link" aria-label="Direkter Link zur Searching Locations" title="Direkter Link zur Searching Locations">​</a></h2>
+<p>Location searches work for both managed locations and free-text locations.</p>
+<p>In saved location values, the first character often tells you what kind of location it is:</p>
+<ul>
+<li><code>#</code> means structured storage, such as <code>#Main/S:3/P:2</code></li>
+<li><code>@</code> means free text, such as <code>@loaned to john</code></li>
+<li><code>!</code> means the spool is in a printer</li>
+</ul>
+<p>These leading characters are part of the saved location value. They are not field names, so they are not listed in the table at the end.</p>
+<p>For managed locations such as <code>#Main/S:3/P:2</code>, you can search useful pieces of the path.</p>
+<p>Examples:</p>
+<ul>
+<li><code>actual:Main</code>
+Finds spools whose current location includes <code>Main</code>.</li>
+<li><code>actual:S:3</code>
+Finds spools whose current location includes <code>S:3</code>.</li>
+<li><code>actual:Main/S:*</code>
+Finds spools somewhere under <code>Main/S</code>.</li>
+</ul>
+<p>For free-text locations, normal word searches and quoted phrases work too.</p>
+<p>Examples:</p>
+<ul>
+<li><code>actual:loaned</code>
+Finds locations that include the word <code>loaned</code>.</li>
+<li><code>actual:&quot;loaned to john&quot;</code>
+Finds that exact location text.</li>
+</ul>
+<p>The location fields are listed in <a href="#field-names-aliases-and-built-in-shortcuts">Field Names, Aliases, and Built-In Shortcuts</a>.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="the--shortcut">The <code>@</code> Shortcut<a href="#the--shortcut" class="hash-link" aria-label="Direkter Link zur the--shortcut" title="Direkter Link zur the--shortcut">​</a></h2>
+<p>At the top level, <code>@...</code> is a short form of <code>actual:...</code>.</p>
+<p>This is different from a saved location value that starts with <code>@</code>.</p>
+<p>Examples:</p>
+<ul>
+<li><code>@Main</code>
+Means the same as <code>actual:Main</code>.</li>
+<li><code>@&quot;loaned to john&quot;</code>
+Means the same as <code>actual:&quot;loaned to john&quot;</code>.</li>
+<li><code>@(Main, loaned)</code>
+Searches the current location for <code>Main</code> or <code>loaned</code>.</li>
+<li><code>@@loaned</code>
+Searches for the literal text <code>@loaned</code> in the current location.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="matching-different-unicode-forms">Matching Different Unicode Forms<a href="#matching-different-unicode-forms" class="hash-link" aria-label="Direkter Link zur Matching Different Unicode Forms" title="Direkter Link zur Matching Different Unicode Forms">​</a></h2>
+<p>Searches also handle different Unicode forms of the same visible text.</p>
+<p>Example:</p>
+<ul>
+<li><code>brand:café</code>
+Can match a stored value like <code>CAFÉ</code>.</li>
+</ul>
+<p>This does not remove accents.</p>
+<p>Example:</p>
+<ul>
+<li><code>brand:cafe</code>
+Is not the same as <code>brand:café</code>.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="spaces-and-formatting">Spaces and Formatting<a href="#spaces-and-formatting" class="hash-link" aria-label="Direkter Link zur Spaces and Formatting" title="Direkter Link zur Spaces and Formatting">​</a></h2>
+<p>Extra spaces are usually fine.</p>
+<p>Examples:</p>
+<ul>
+<li><code>material:PLA color:Red</code>
+Works normally.</li>
+<li><code>material: PLA</code>
+Also works.</li>
+<li><code>weight_net: &lt; 250</code>
+Also works.</li>
+</ul>
+<p>One exception is weight units: the unit must stay attached to the number.</p>
+<p>Example:</p>
+<ul>
+<li><code>&gt;250 g</code>
+Does not work.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="invalid-searches-and-current-limits">Invalid Searches and Current Limits<a href="#invalid-searches-and-current-limits" class="hash-link" aria-label="Direkter Link zur Invalid Searches and Current Limits" title="Direkter Link zur Invalid Searches and Current Limits">​</a></h2>
+<p>Here are a few common things that do not work:</p>
+<ul>
+<li><code>&gt;250</code>
+A top-level numeric check needs a unit such as <code>g</code> or <code>kg</code>.</li>
+<li><code>&quot;&quot;</code>
+Empty quoted phrases do not work by themselves. To check an empty field, name the field, such as <code>note:=&quot;&quot;</code>.</li>
+<li><code>brand:&quot;&quot;</code>
+Empty quoted phrases do not work inside a field either. Use <code>brand:=&quot;&quot;</code> to check for an empty brand.</li>
+<li><code>brand:=()</code>
+Exact-value lists cannot be empty. Use values inside the parentheses, such as <code>brand:=(Bambu, Polymaker)</code>.</li>
+<li><code>&quot;bad\q&quot;</code>
+Unknown quoted-string escapes do not work. Use only <code>\&quot;</code>, <code>\\</code>, <code>\*</code>, <code>\n</code>, <code>\r</code>, or <code>\t</code>.</li>
+<li><code>brand:(material:PLA)</code>
+You cannot put one field search inside another field search.</li>
+</ul>
+<p>Current limits:</p>
+<ul>
+<li>Only <code>*</code> is supported as a wildcard.</li>
+<li>Weight units are only <code>g</code> and <code>kg</code>.</li>
+<li>Empty groups do not work.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="field-names-aliases-and-built-in-shortcuts">Field Names, Aliases, and Built-In Shortcuts<a href="#field-names-aliases-and-built-in-shortcuts" class="hash-link" aria-label="Direkter Link zur Field Names, Aliases, and Built-In Shortcuts" title="Direkter Link zur Field Names, Aliases, and Built-In Shortcuts">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="fields-and-aliases">Fields and Aliases<a href="#fields-and-aliases" class="hash-link" aria-label="Direkter Link zur Fields and Aliases" title="Direkter Link zur Fields and Aliases">​</a></h3>
+<table><thead><tr><th>Field name(s)</th><th>What it means</th></tr></thead><tbody><tr><td><code>description</code></td><td>Main searchable text built from brand, material, subtype, and color name</td></tr><tr><td><code>brand</code></td><td>Brand name</td></tr><tr><td><code>material</code></td><td>Material name</td></tr><tr><td><code>subtype</code></td><td>Subtype or variant</td></tr><tr><td><code>color_name</code>, <code>color</code></td><td>Color name</td></tr><tr><td><code>id</code></td><td>Spool ID</td></tr><tr><td><code>spools_count</code></td><td>Number of spools in the record</td></tr><tr><td><code>tags</code></td><td>Tag values</td></tr><tr><td><code>tags_count</code></td><td>Number of non-empty tag values</td></tr><tr><td><code>slicer_filament</code></td><td>Slicer filament name</td></tr><tr><td><code>weight_net</code>, <code>net</code></td><td>Net weight</td></tr><tr><td><code>weight_label</code>, <code>label</code></td><td>Label weight</td></tr><tr><td><code>weight_used</code>, <code>used</code></td><td>Used weight</td></tr><tr><td><code>weight_gross</code>, <code>gross</code></td><td>Gross weight</td></tr><tr><td><code>note</code></td><td>Note text</td></tr><tr><td><code>color_rgba</code>, <code>rgba</code></td><td>RGBA color values</td></tr><tr><td><code>color_count</code></td><td>Number of non-empty RGBA color values</td></tr><tr><td><code>data_origin</code></td><td>Where the data came from</td></tr><tr><td><code>location_actual</code>, <code>actual_location</code>, <code>actual</code></td><td>Current location</td></tr><tr><td><code>location_assigned</code>, <code>assigned_location</code>, <code>assigned</code></td><td>Assigned location</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="built-in-shortcuts-1">Built-In Shortcuts<a href="#built-in-shortcuts-1" class="hash-link" aria-label="Direkter Link zur Built-In Shortcuts" title="Direkter Link zur Built-In Shortcuts">​</a></h3>
+<table><thead><tr><th>Shortcut</th><th>What it means</th></tr></thead><tbody><tr><td><code>%tagged</code></td><td>Has at least one tag</td></tr><tr><td><code>%multicolor</code></td><td>Has at least 2 saved color values</td></tr><tr><td><code>%inprinter</code></td><td>Current location says the spool is in a printer</td></tr><tr><td><code>%inplace</code></td><td>Current location and assigned location are the same</td></tr><tr><td><code>%stock</code></td><td>Record contains 2 or more spools</td></tr><tr><td><code>%transparent</code></td><td>At least one saved color value includes transparency</td></tr><tr><td><code>%placed</code></td><td>Has a current location</td></tr><tr><td><code>%assigned</code></td><td>Has an assigned location</td></tr></tbody></table></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Dokumentation Seiten"><a class="pagination-nav__link pagination-nav__link--prev" href="/de/docs/full-guide/dashboard"><div class="pagination-nav__sublabel">Zurück</div><div class="pagination-nav__label">Dashboard</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/de/docs/full-guide/multiple-printers"><div class="pagination-nav__sublabel">Weiter</div><div class="pagination-nav__label">Multiple Printers</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#what-a-search-looks-at-by-default" class="table-of-contents__link toc-highlight">What a Search Looks At by Default</a></li><li><a href="#quick-examples" class="table-of-contents__link toc-highlight">Quick Examples</a></li><li><a href="#use-a-space-to-mean-and" class="table-of-contents__link toc-highlight">Use a Space to Mean &quot;and&quot;</a></li><li><a href="#use-a-comma-to-mean-or" class="table-of-contents__link toc-highlight">Use a Comma to Mean &quot;or&quot;</a></li><li><a href="#use--to-mean-not" class="table-of-contents__link toc-highlight">Use <code>!</code> to Mean &quot;not&quot;</a></li><li><a href="#search-by-word" class="table-of-contents__link toc-highlight">Search by Word</a></li><li><a href="#search-for-an-exact-phrase" class="table-of-contents__link toc-highlight">Search for an Exact Phrase</a></li><li><a href="#group-parts-with-parentheses" class="table-of-contents__link toc-highlight">Group Parts with Parentheses</a></li><li><a href="#use--to-match-part-of-a-word" class="table-of-contents__link toc-highlight">Use <code>*</code> to Match Part of a Word</a></li><li><a href="#uppercase-and-lowercase-do-not-matter" class="table-of-contents__link toc-highlight">Uppercase and Lowercase Do Not Matter</a></li><li><a href="#how-words-are-split" class="table-of-contents__link toc-highlight">How Words Are Split</a></li><li><a href="#search-in-one-specific-field" class="table-of-contents__link toc-highlight">Search in One Specific Field</a></li><li><a href="#match-a-field-exactly" class="table-of-contents__link toc-highlight">Match a Field Exactly</a></li><li><a href="#keep-several-checks-in-the-same-field" class="table-of-contents__link toc-highlight">Keep Several Checks in the Same Field</a></li><li><a href="#short-names-for-common-fields" class="table-of-contents__link toc-highlight">Short Names for Common Fields</a></li><li><a href="#filter-by-numbers" class="table-of-contents__link toc-highlight">Filter by Numbers</a></li><li><a href="#use-g-and-kg" class="table-of-contents__link toc-highlight">Use <code>g</code> and <code>kg</code></a></li><li><a href="#short-form-for-an-exact-number-match" class="table-of-contents__link toc-highlight">Short Form for an Exact Number Match</a></li><li><a href="#how-spool-id-searches-work" class="table-of-contents__link toc-highlight">How Spool ID Searches Work</a></li><li><a href="#built-in-shortcuts" class="table-of-contents__link toc-highlight">Built-In Shortcuts</a></li><li><a href="#searching-lists-like-tags-and-colors" class="table-of-contents__link toc-highlight">Searching Lists Like Tags and Colors</a></li><li><a href="#counting-spools-tags-and-colors" class="table-of-contents__link toc-highlight">Counting Spools, Tags, and Colors</a></li><li><a href="#searching-locations" class="table-of-contents__link toc-highlight">Searching Locations</a></li><li><a href="#the--shortcut" class="table-of-contents__link toc-highlight">The <code>@</code> Shortcut</a></li><li><a href="#matching-different-unicode-forms" class="table-of-contents__link toc-highlight">Matching Different Unicode Forms</a></li><li><a href="#spaces-and-formatting" class="table-of-contents__link toc-highlight">Spaces and Formatting</a></li><li><a href="#invalid-searches-and-current-limits" class="table-of-contents__link toc-highlight">Invalid Searches and Current Limits</a></li><li><a href="#field-names-aliases-and-built-in-shortcuts" class="table-of-contents__link toc-highlight">Field Names, Aliases, and Built-In Shortcuts</a><ul><li><a href="#fields-and-aliases" class="table-of-contents__link toc-highlight">Fields and Aliases</a></li><li><a href="#built-in-shortcuts-1" class="table-of-contents__link toc-highlight">Built-In Shortcuts</a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://discord.gg/6brKUCERcQ" target="_blank" rel="noopener noreferrer" class="footer__link-item">Discord<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://makerworld.com/en/@yanshay" target="_blank" rel="noopener noreferrer" class="footer__link-item">MakerWorld<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://github.com/yanshay/SpoolEase/discussions" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub Discussions<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/de/blog">Blog</a></li><li class="footer__item"><a href="https://github.com/yanshay/spoolease" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 SpoolEase</div></div></div></footer></div>
+</body>
+</html>
