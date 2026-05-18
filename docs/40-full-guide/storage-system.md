@@ -14,6 +14,8 @@ This feature is available starting version 0.6
 SpoolEase provides a powerful system to organize, track, and manage 3D printing filament spools.  
 Using a combination of structured storage, optional free-text locations, and NFC-based location tags, you can efficiently monitor where each spool is stored, track its location, and quickly tell where it's located.  
 
+<img src={storageSystemRack} alt="Storage System Example" class="img-shadow" />
+
 This guide explains how locations work in SpoolEase, how to configure your storage system, how to use it and how to use NFC location tags to simplify managing your spools even more.
 
 ## What is Location in SpoolEase
@@ -57,7 +59,7 @@ Each container is labeled with its exact location. Inside each label is an NFC t
 
 Note that **this is only an example**. Many other configurations and approaches for configuring racks and for using NFC tags and labels are possible.
 
-<img src={storageSystemRack} alt="Terminal Screen" class="img-shadow" />
+<img src={storageSystemRack} alt="Storage System Example" class="img-shadow" />
 
 
 ### Current Limitations
