@@ -6,7 +6,7 @@ sidebar_label: Release Notes
 ---
 # Release Notes
 
-### 0.6.3
+### 0.6.3 — May 18, 2026 
 - **Dashboard**  
   Configurable dashboard based on the filter expression language  
 
