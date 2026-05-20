@@ -364,6 +364,8 @@ Examples:
   Finds spools with no tags.
 - `%stock`
   Finds stock records.
+- `%empty`
+  Finds spools whose net weight is zero.
 - `%placed`
   Finds spools that have a current location.
 - `%inprinter`
@@ -559,6 +561,7 @@ Current limits:
 | `%inprinter` | Current location says the spool is in a printer |
 | `%inplace` | Current location and assigned location are the same |
 | `%stock` | Record contains 2 or more spools |
+| `%empty` | Net weight is zero |
 | `%transparent` | At least one saved color value includes transparency |
 | `%placed` | Has a current location |
 | `%assigned` | Has an assigned location |
