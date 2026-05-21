@@ -226,6 +226,15 @@ Examples:
 
 A field that is missing or only spaces counts as empty.
 
+For weight fields, the same form checks whether the saved weight value is missing or present.
+
+Examples:
+
+- `net:=""`
+  Finds spools whose net weight is missing.
+- `net:!=""`
+  Finds spools whose net weight is present, even if it is zero.
+
 ## Keep Several Checks in the Same Field
 
 If more than one check should stay inside the same field, use parentheses.
@@ -284,6 +293,19 @@ Examples:
   Finds spools with less than 20 grams used.
 
 Numeric fields are listed in [Field Names, Aliases, and Built-In Shortcuts](#field-names-aliases-and-built-in-shortcuts).
+
+If a weight value is missing, it is not treated as zero.
+
+Examples:
+
+- `net:=0`
+  Does not match a spool whose net weight is missing.
+- `net:!=0`
+  Does match a spool whose net weight is missing.
+- `net:=""`
+  Directly checks for a missing net weight.
+- `net:!=""`
+  Directly checks for a present net weight.
 
 ## Use `g` and `kg`
 
@@ -365,7 +387,7 @@ Examples:
 - `%stock`
   Finds stock records.
 - `%empty`
-  Finds spools whose net weight is zero.
+  Finds spools whose net weight is saved as zero.
 - `%placed`
   Finds spools that have a current location.
 - `%inprinter`
@@ -561,7 +583,7 @@ Current limits:
 | `%inprinter` | Current location says the spool is in a printer |
 | `%inplace` | Current location and assigned location are the same |
 | `%stock` | Record contains 2 or more spools |
-| `%empty` | Net weight is zero |
+| `%empty` | Net weight is saved as zero |
 | `%transparent` | At least one saved color value includes transparency |
 | `%placed` | Has a current location |
 | `%assigned` | Has an assigned location |
