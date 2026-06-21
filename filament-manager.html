@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.8.1">
 <title data-rh="true">Filament Manager for 3D Printer Spools | SpoolEase</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://www.spoolease.io/img/spoolease-social-card.png"><meta data-rh="true" name="twitter:image" content="https://www.spoolease.io/img/spoolease-social-card.png"><meta data-rh="true" property="og:url" content="https://www.spoolease.io/filament-manager"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" property="og:locale:alternate" content="de"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docusaurus_tag" content="default"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docsearch:docusaurus_tag" content="default"><meta data-rh="true" property="og:title" content="Filament Manager for 3D Printer Spools | SpoolEase"><meta data-rh="true" name="description" content="A practical guide to choosing a filament manager for 3D printer spools, including inventory data, remaining weight, storage locations, search, NFC/RFID tags, printer slots, AMS workflows, and slicer integration."><meta data-rh="true" property="og:description" content="A practical guide to choosing a filament manager for 3D printer spools, including inventory data, remaining weight, storage locations, search, NFC/RFID tags, printer slots, AMS workflows, and slicer integration."><link data-rh="true" rel="icon" href="/img/spoolease-logo.png"><link data-rh="true" rel="canonical" href="https://www.spoolease.io/filament-manager"><link data-rh="true" rel="alternate" href="https://www.spoolease.io/filament-manager" hreflang="en"><link data-rh="true" rel="alternate" href="https://www.spoolease.io/de/filament-manager" hreflang="de"><link data-rh="true" rel="alternate" href="https://www.spoolease.io/filament-manager" hreflang="x-default"><link rel="stylesheet" href="/assets/css/styles.de1a2b4f.css">
-<script src="/assets/js/runtime~main.3e06418f.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.749a3631.js" defer="defer"></script>
 <script src="/assets/js/main.e761e285.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -32,7 +32,7 @@
 <li>Notes for personal unstructured information</li>
 </ul>
 <p>The slicer-related information matters because automatic printer or slot configuration is only useful when the underlying information is accurate. If filament profile mapping is left at the default or is wrong, automation can reduce print quality without a way to identify the root cause.</p>
-<p>Good color handling also matters. Generic color pickers are often not enough for real filament. A practical system should make it easy to set RGB colors from photos of real printed material, or support a workflow that reflects what the filament actually looks like after printing.</p>
+<p>Good color handling also matters. Generic color pickers are often not enough for real filament. A practical system should make it easy to set RGB colors from photos of real printed material, or support a workflow that reflects what the filament actually looks like after printing. And don&#x27;t forget support for multi-colored spools, so being able to set several colors to a spool, and support for transparency.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="spool-identification-should-work-for-both-the-system-and-the-user">Spool identification should work for both the system and the user<a href="#spool-identification-should-work-for-both-the-system-and-the-user" class="hash-link" aria-label="Direct link to Spool identification should work for both the system and the user" title="Direct link to Spool identification should work for both the system and the user">​</a></h2>
 <p>Tags are useful when they reduce manual work. NFC/RFID, QR codes, and printed labels can all help the filament manager identify a spool quickly. The important point is not the tag technology itself. The important points are usability and whether the workflow keeps the inventory accurate without slowing down normal printing.</p>
 <p>Usability differs between identification methods. NFC/RFID can be as simple as placing the spool next to a reader, either a dedicated reader or a mobile phone. A dedicated reader can be more convenient because you do not need to carry a phone through every spool movement. QR codes can work well too, but they usually require opening an app and pointing the phone camera at the code. That extra step may seem negligible at first, but in practice it can mean going to another room to fetch your phone just to load a spool into the printer. This is why printer manufacturers chose to put NFC readers into their multi-material systems or printers.</p>
@@ -51,11 +51,12 @@
 <p>Simple filtering is useful, but real filament questions are often more complex than a single material or color.</p>
 <p>You may need to find:</p>
 <ul>
-<li>PLA or PETG in either red or orange with more than 300g remaining</li>
+<li>PLA or PETG in either red or orange with more than 300g remaining (so several specific material types of several colors in a single filter)</li>
 <li>Small leftovers suitable for quick test prints</li>
 <li>All spools of a specific material stored outside dry boxes</li>
 <li>A specific brand or color family</li>
 <li>Spools currently loaded in printers or AMS units, or stored in a certain rack</li>
+<li>Search for multi-color PLA spools with over 200g that are not silk or matte</li>
 </ul>
 <p>If a filament manager cannot answer these questions quickly, the inventory may still be accurate but not very useful.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="you-need-the-big-picture-not-only-records">You need the big picture, not only records<a href="#you-need-the-big-picture-not-only-records" class="hash-link" aria-label="Direct link to You need the big picture, not only records" title="Direct link to You need the big picture, not only records">​</a></h2>
