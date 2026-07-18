@@ -75,7 +75,7 @@ Note: The ESP32-S3 GND is on one side of the board, while the other pins are on 
 2. **ESP32-S3 Placement:**
    - Position the ESP32-S3 in its designated location at the front
    - Ensure it sits fully in place with all connections secure, it should have only very little room to move sideways if any
-   - The ESP32-S3 antenna should be positioned on the right side
+   - The ESP32-S3 antenna (white rectangle around electronics) should be positioned on the right side
 
 ![Components Base Placement 1](./scale/scale-components-base-placement-1.jpg)
 ![Components Base Placement 2](./scale/scale-components-base-placement-2.jpg)
@@ -86,7 +86,7 @@ As mentioned earlier, this step is optional and only needed if you want to add a
 
 1. **Connect wires to PN532:**
    - Similar to the HX711, connect 7 Dupont wires to the PN532
-   - Install wires so they come out on the side opposite to the antenna (not the electronics side) (**image below is a bad example and doesn't follow this recommendation**)
+   - Install wires so they come out on the side opposite to the antenna (not the electronics side) (**see image below)
    - Configure the PN532 for SPI mode: with board poitioned so dip-switches on bottom right, set left switch down and right switch up
 
 :::warning
@@ -137,7 +137,7 @@ At this point, test your configuration before closing the case. For this, refer 
 2. **Wire Management:**
    - Verify the ESP32-S3 is properly positioned
    - Ensure all wires are clear of the load cell
-   - Keep wires below or to the sides of components, not extending beyond base edges
+   - Keep wires below or to the sides of components, not extending beyond base edges, the scale base has two cable tie loops that can optionally be used.
 
 3. **Attach Cover:**
    - Carefully place the cover over the base without pinching any wires
