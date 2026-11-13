@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.8.1">
 <title data-rh="true">Spool Weight Tracking | SpoolEase</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://www.spoolease.io/de/img/spoolease-social-card.png"><meta data-rh="true" name="twitter:image" content="https://www.spoolease.io/de/img/spoolease-social-card.png"><meta data-rh="true" property="og:url" content="https://www.spoolease.io/de/docs/full-guide/spool-weight-tracking"><meta data-rh="true" property="og:locale" content="de"><meta data-rh="true" property="og:locale:alternate" content="en"><meta data-rh="true" name="docusaurus_locale" content="de"><meta data-rh="true" name="docsearch:language" content="de"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Spool Weight Tracking | SpoolEase"><meta data-rh="true" name="description" content="Spool Weight Tracking represents a core capability within SpoolEase."><meta data-rh="true" property="og:description" content="Spool Weight Tracking represents a core capability within SpoolEase."><link data-rh="true" rel="icon" href="/de/img/spoolease-logo.png"><link data-rh="true" rel="canonical" href="https://www.spoolease.io/de/docs/full-guide/spool-weight-tracking"><link data-rh="true" rel="alternate" href="https://www.spoolease.io/docs/full-guide/spool-weight-tracking" hreflang="en"><link data-rh="true" rel="alternate" href="https://www.spoolease.io/de/docs/full-guide/spool-weight-tracking" hreflang="de"><link data-rh="true" rel="alternate" href="https://www.spoolease.io/docs/full-guide/spool-weight-tracking" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Full Guide","item":"https://www.spoolease.io/de/docs/full-guide/"},{"@type":"ListItem","position":2,"name":"Spool Weight Tracking","item":"https://www.spoolease.io/de/docs/full-guide/spool-weight-tracking"}]}</script><link rel="stylesheet" href="/de/assets/css/styles.6ca88b72.css">
-<script src="/de/assets/js/runtime~main.de469478.js" defer="defer"></script>
+<script src="/de/assets/js/runtime~main.5d103813.js" defer="defer"></script>
 <script src="/de/assets/js/main.e0b684e3.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -15,7 +15,7 @@
 <p><strong>Spool Weight Tracking</strong> represents a core capability within SpoolEase.</p>
 <p>To achieve optimal weight tracking accuracy, SpoolEase utilizes two complementary approaches for determining spool weight:</p>
 <ul>
-<li>Measuring spool weight directly using the SpoolEase scale</li>
+<li>Measuring spool weight directly using the built-in scale on SpoolEase Duo or a separate SpoolEase Scale</li>
 <li>Tracking print progress and computing filament consumption based on printer activity</li>
 </ul>
 <p>Each approach offers distinct advantages and limitations, and their combined use provides continuous, reliable visibility into spool weight status, including as it is used and when inside AMS.</p>
@@ -25,8 +25,12 @@
 <p>Additional parameters can be specified when entering spool details in the inventory application.</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="scale-based-weighing">Scale-Based Weighing<a href="#scale-based-weighing" class="hash-link" aria-label="Direkter Link zur Scale-Based Weighing" title="Direkter Link zur Scale-Based Weighing">​</a></h3>
 <p>This method provides the most accurate determination of spool weight. Its primary limitation is that it requires an additional manual step. SpoolEase addresses this by streamlining the weighing process as much as possible.</p>
-<p><strong>Weight measurement occurs when spool tag is scanned and its information is loaded into the staging area</strong>. The weighting process involves placing the spool on the scale and pressing the scale button to capture the measurement.</p>
-<p>To further simplify this workflow, SpoolEase automatically loads spool information into the staging area when a spool is removed from the AMS. This timing is ideal for weight measurement, ensuring accurate weight data is available for the next use. The complete workflow consists of removing a spool from the AMS after printing completes, placing it on the scale, and pressing the scale button once the weight reading stabilizes.</p>
+<p><strong>Weight measurement occurs when spool tag is scanned and its information is loaded into the staging area</strong>. Place the spool on the scale and capture the measurement using either device:</p>
+<ul>
+<li><strong>SpoolEase Duo:</strong> Press the staging entry, then press <strong>Quick Weight</strong>.</li>
+<li><strong>SpoolEase Scale:</strong> Press the scale button.</li>
+</ul>
+<p>To further simplify this workflow, SpoolEase automatically loads spool information into the staging area when a spool is removed from the AMS. This timing is ideal for weight measurement, ensuring accurate weight data is available for the next use. The complete workflow consists of removing a spool from the AMS after printing completes, placing it on the scale, and capturing the weight as described above once the reading stabilizes.</p>
 <p>Weight information is immediately synchronized with the inventory system.</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="weight-calculation-during-printing">Weight Calculation During Printing<a href="#weight-calculation-during-printing" class="hash-link" aria-label="Direkter Link zur Weight Calculation During Printing" title="Direkter Link zur Weight Calculation During Printing">​</a></h3>
 <p>While scale-based weighing delivers accuracy and simplicity, it cannot be performed when a spool is actively in use within the AMS or loaded into the external feed. Spools frequently remain in the AMS across multiple print jobs, making continuous weight tracking essential.</p>
@@ -40,7 +44,7 @@
 </ol></div></div>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="net-weight-calculation">Net Weight Calculation<a href="#net-weight-calculation" class="hash-link" aria-label="Direkter Link zur Net Weight Calculation" title="Direkter Link zur Net Weight Calculation">​</a></h3>
 <p>The most useful weight value is the <strong>Net Weight</strong>.</p>
-<p>To calculate it, a measured <strong>Gross Weight</strong>, taken using SpoolEase Scale, must be available. In addition, one of the following is required:</p>
+<p>To calculate it, a measured <strong>Gross Weight</strong>, taken using SpoolEase Duo&#x27;s built-in scale or a separate SpoolEase Scale, must be available. In addition, one of the following is required:</p>
 <ul>
 <li><strong>Empty Weight</strong><br>
 <!-- -->or</li>
